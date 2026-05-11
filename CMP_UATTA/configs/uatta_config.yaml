@@ -1,0 +1,59 @@
+image_root: 'data/PAB/'
+test_file: 'data/PAB/annotation/test/attr.json'
+tta_file: 'data/PAB/annotation/test/attr.json'
+
+## Image Encoder
+vision_config: 'configs/config_swinB.json'
+h: 224
+w: 224
+
+## Text Encoder
+text_config: 'configs/config_bert.json'
+text_encoder:  'checkpoint/bert-base-uncased'
+
+load_params: True
+load_pretrained: True
+
+max_words: 56
+max_tokens: 56
+eda_p: 1
+erasing_p: 0.6
+
+batch_size_test: 22
+batch_size_test_text: 150
+
+# embed_dim: 2048 # for cmp
+embed_dim: 256 # for xvl
+itc_dp: 0.5
+temp: 0.07
+label_smooth: 0.2
+
+k_test: 128
+
+be_hard: False
+be_pose_img: False
+pose_conv: False
+
+## Test Time Adapt
+sample_selection: 'topk' #'all' #'top1'
+k_sample_selection: 5
+
+batch_size_tta: 16
+k_tta: 8
+
+optimizer: {opt: adamW, lr: 5e-5, weight_decay: 0.01, lr_mult: 2}
+scheduler: {sched: step, lr: 5e-5, epochs: 60, num_warmup_steps: 500}
+num_epoch: 60
+lr: 5e-5
+seed: 42
+eval_epochs: [0, 1, 2, 4, 9, 14, 19, 29, 39, 49, 59]
+
+score_temper: 1.0
+tta_steps: 1
+
+temperature: 0.03
+uncertainty: 'diff_div_mean' # 'inversed_recall_proba' #'abs_diff_log'
+uncertainty_temper: 1.0
+uncertainty_temper_is_learnable: False
+uncertainty_t2i_temper: 1.0
+uncertainty_i2t_temper: 1.0

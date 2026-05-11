@@ -1,0 +1,17 @@
+numpy==1.26.4
+opencv-python==4.6.0.66
+transformers==4.57.6
+matplotlib
+tqdm
+easydict
+prettytable
+tensorboard
+pyyaml
+regex
+ftfy
+ruamel_yaml
+scipy
+timm
+ruamel.yaml
+peft
+nltk

@@ -1,0 +1,1307 @@
+Not using distributed mode
+### Hyper-parameters:
+     output_dir: outputs/reproduce/cuhk_pedes
+     seed: 42
+     device: cuda
+     batch_size_tta: 16
+     epochs: 20
+     lr: 1e-05
+### Creating test dataset
+     test_txt_set: 6156    test_img_set: 3074
+     test_txt_loader: 13    test_img_loader: 7
+### Creating model
+Training Model with ['sdm', 'id', 'mlm'] tasks
+===========================ERROR occur in copy visual.positional_embedding, torch.Size([197, 768])=========================
+shape do not match in k :visual.positional_embedding: param_dicttorch.Size([197, 768]) vs self.state_dict()torch.Size([193, 768])
+        [TRAINABLE] prompt_learning_embedding (shape: torch.Size([1, 1, 512]))
+        [TRAINABLE] base_model.positional_embedding (shape: torch.Size([77, 512]))
+        [TRAINABLE] base_model.text_projection (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.visual.class_embedding (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.positional_embedding (shape: torch.Size([193, 768]))
+        [TRAINABLE] base_model.visual.proj (shape: torch.Size([768, 512]))
+        [TRAINABLE] base_model.visual.conv1.weight (shape: torch.Size([768, 3, 16, 16]))
+        [TRAINABLE] base_model.visual.ln_pre.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.ln_pre.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.0.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.1.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.2.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.3.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.4.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.5.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.6.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.7.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.8.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.9.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.10.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.attn.in_proj_weight (shape: torch.Size([2304, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.attn.in_proj_bias (shape: torch.Size([2304]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.attn.out_proj.weight (shape: torch.Size([768, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.attn.out_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.ln_1.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.ln_1.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.mlp.c_fc.weight (shape: torch.Size([3072, 768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.mlp.c_fc.bias (shape: torch.Size([3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.mlp.c_proj.weight (shape: torch.Size([768, 3072]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.mlp.c_proj.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.ln_2.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.transformer.resblocks.11.ln_2.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.ln_post.weight (shape: torch.Size([768]))
+        [TRAINABLE] base_model.visual.ln_post.bias (shape: torch.Size([768]))
+        [TRAINABLE] base_model.token_embedding.weight (shape: torch.Size([49408, 512]))
+        [TRAINABLE] base_model.ln_final.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.ln_final.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.0.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.0.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.0.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.0.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.1.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.1.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.1.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.1.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.2.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.2.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.2.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.2.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.3.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.3.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.3.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.3.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.4.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.4.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.4.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.4.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.5.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.5.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.5.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.5.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.6.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.6.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.6.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.6.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.7.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.7.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.7.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.7.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.8.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.8.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.8.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.8.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.9.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.9.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.9.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.9.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.10.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.10.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.10.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.10.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] base_model.transformer.resblocks.11.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] base_model.transformer.resblocks.11.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] base_model.transformer.resblocks.11.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] base_model.transformer.resblocks.11.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] classifier.weight (shape: torch.Size([11003, 512]))
+        [TRAINABLE] classifier.bias (shape: torch.Size([11003]))
+        [TRAINABLE] cross_attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] cross_attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] cross_attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] cross_attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.0.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.1.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.2.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.attn.in_proj_weight (shape: torch.Size([1536, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.attn.in_proj_bias (shape: torch.Size([1536]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.attn.out_proj.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.attn.out_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.ln_1.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.ln_1.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.mlp.c_fc.weight (shape: torch.Size([2048, 512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.mlp.c_fc.bias (shape: torch.Size([2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.mlp.c_proj.weight (shape: torch.Size([512, 2048]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.mlp.c_proj.bias (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.ln_2.weight (shape: torch.Size([512]))
+        [TRAINABLE] cross_modal_transformer.resblocks.3.ln_2.bias (shape: torch.Size([512]))
+        [TRAINABLE] ln_pre_t.weight (shape: torch.Size([512]))
+        [TRAINABLE] ln_pre_t.bias (shape: torch.Size([512]))
+        [TRAINABLE] ln_pre_i.weight (shape: torch.Size([512]))
+        [TRAINABLE] ln_pre_i.bias (shape: torch.Size([512]))
+        [TRAINABLE] ln_post.weight (shape: torch.Size([512]))
+        [TRAINABLE] ln_post.bias (shape: torch.Size([512]))
+        [TRAINABLE] mlm_head.dense.weight (shape: torch.Size([512, 512]))
+        [TRAINABLE] mlm_head.dense.bias (shape: torch.Size([512]))
+        [TRAINABLE] mlm_head.ln.weight (shape: torch.Size([512]))
+        [TRAINABLE] mlm_head.ln.bias (shape: torch.Size([512]))
+        [TRAINABLE] mlm_head.fc.weight (shape: torch.Size([49408, 512]))
+        [TRAINABLE] mlm_head.fc.bias (shape: torch.Size([49408]))
+     Total Params Sum:  194535931
+### Zero-Shot Score: 
+<RELEASE_ROOT>/IRRA_UATTA/utils/metrics.py:53: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+<RELEASE_ROOT>/IRRA_UATTA/utils/metrics.py:64: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+<RELEASE_ROOT>/IRRA_UATTA/tta.py:268: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()  # bf16
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
++-------+--------+--------+--------+--------+--------+
+### TTA:
+### Compute Cos Similarity Uncertainty
+     preprocess_tta_coefficients  start
+     sample selection ...
+     number of sample after sample_selection: 6156
+     uncertainty ...
+     pos/neg sampling ...
+      number of sample after pos/neg sampling: torch.Size([6156, 8])
+     preprocess_tta_coefficients  end
+### Creating TTA dataset
+     tta_dataset: 6156
+### Creating tta dataloader
+### create_loader returns a list length of 1
+     tta_loader: 384
+### Configure adapted weights
+     TTA Dropout Modules: 
+ []
+     TTA Require Gradient Params: 
+ [('base_model.ln_final.weight', torch.Size([512])), ('base_model.ln_final.bias', torch.Size([512])), ('base_model.transformer.resblocks.1.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.1.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.1.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.1.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.2.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.2.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.2.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.2.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.3.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.3.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.3.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.3.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.4.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.4.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.4.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.4.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.5.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.5.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.5.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.5.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.7.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.7.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.7.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.7.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.8.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.8.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.8.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.8.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.9.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.9.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.9.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.9.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.10.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.10.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.10.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.10.ln_2.bias', torch.Size([512])), ('base_model.transformer.resblocks.11.ln_1.weight', torch.Size([512])), ('base_model.transformer.resblocks.11.ln_1.bias', torch.Size([512])), ('base_model.transformer.resblocks.11.ln_2.weight', torch.Size([512])), ('base_model.transformer.resblocks.11.ln_2.bias', torch.Size([512]))]
+     TTA Dropout Modules Number: 
+ 0
+     TTA Require Gradient Params Sum: 
+ 21504
+Using 5.0 times learning rate for random init module 
+### Start Test Time Adaptation : num_epoch = 20
+     Epoch[0] Iteration[10/384], entropy: 0.1124, uncertainty: 1.6886, loss: 0.0580, lr: 7.50e-06
+     Epoch[0] Iteration[20/384], entropy: 0.3914, uncertainty: 1.9359, loss: 0.1598, lr: 0.00e+00
+     Epoch[0] Iteration[30/384], entropy: 0.5228, uncertainty: 1.9265, loss: 0.2275, lr: 7.50e-06
+     Epoch[0] Iteration[40/384], entropy: 0.4135, uncertainty: 1.8204, loss: 0.1919, lr: 7.50e-06
+     Epoch[0] Iteration[50/384], entropy: 0.3322, uncertainty: 1.8351, loss: 0.1527, lr: 0.00e+00
+     Epoch[0] Iteration[60/384], entropy: 0.4321, uncertainty: 1.7783, loss: 0.1890, lr: 7.50e-06
+     Epoch[0] Iteration[70/384], entropy: 0.5873, uncertainty: 1.8770, loss: 0.2594, lr: 7.50e-06
+     Epoch[0] Iteration[80/384], entropy: 0.5728, uncertainty: 1.8666, loss: 0.2481, lr: 0.00e+00
+     Epoch[0] Iteration[90/384], entropy: 0.4451, uncertainty: 1.9368, loss: 0.1954, lr: 7.50e-06
+     Epoch[0] Iteration[100/384], entropy: 0.3211, uncertainty: 1.8845, loss: 0.1481, lr: 7.50e-06
+     Epoch[0] Iteration[110/384], entropy: 0.4555, uncertainty: 1.8168, loss: 0.2110, lr: 0.00e+00
+     Epoch[0] Iteration[120/384], entropy: 0.2154, uncertainty: 1.6569, loss: 0.0988, lr: 7.50e-06
+     Epoch[0] Iteration[130/384], entropy: 0.3971, uncertainty: 1.9184, loss: 0.1755, lr: 7.50e-06
+     Epoch[0] Iteration[140/384], entropy: 0.1885, uncertainty: 1.5344, loss: 0.0829, lr: 0.00e+00
+     Epoch[0] Iteration[150/384], entropy: 0.4309, uncertainty: 1.8904, loss: 0.1926, lr: 7.50e-06
+     Epoch[0] Iteration[160/384], entropy: 0.6541, uncertainty: 2.1528, loss: 0.2756, lr: 7.50e-06
+     Epoch[0] Iteration[170/384], entropy: 0.4094, uncertainty: 1.9474, loss: 0.1749, lr: 0.00e+00
+     Epoch[0] Iteration[180/384], entropy: 0.3103, uncertainty: 1.9937, loss: 0.1412, lr: 7.50e-06
+     Epoch[0] Iteration[190/384], entropy: 0.4850, uncertainty: 1.9086, loss: 0.2114, lr: 7.50e-06
+     Epoch[0] Iteration[200/384], entropy: 0.4306, uncertainty: 1.9251, loss: 0.1875, lr: 0.00e+00
+     Epoch[0] Iteration[210/384], entropy: 0.1090, uncertainty: 1.6232, loss: 0.0540, lr: 7.50e-06
+     Epoch[0] Iteration[220/384], entropy: 0.3375, uncertainty: 2.0499, loss: 0.1508, lr: 7.50e-06
+     Epoch[0] Iteration[230/384], entropy: 0.1901, uncertainty: 1.6507, loss: 0.0828, lr: 0.00e+00
+     Epoch[0] Iteration[240/384], entropy: 0.2734, uncertainty: 1.9857, loss: 0.1231, lr: 7.50e-06
+     Epoch[0] Iteration[250/384], entropy: 0.3508, uncertainty: 1.9097, loss: 0.1576, lr: 7.50e-06
+     Epoch[0] Iteration[260/384], entropy: 0.4906, uncertainty: 1.9889, loss: 0.2107, lr: 0.00e+00
+     Epoch[0] Iteration[270/384], entropy: 0.2272, uncertainty: 1.7905, loss: 0.1008, lr: 7.50e-06
+     Epoch[0] Iteration[280/384], entropy: 0.3403, uncertainty: 1.8527, loss: 0.1477, lr: 7.50e-06
+     Epoch[0] Iteration[290/384], entropy: 0.6854, uncertainty: 2.0816, loss: 0.2893, lr: 0.00e+00
+     Epoch[0] Iteration[300/384], entropy: 0.4248, uncertainty: 1.8744, loss: 0.1955, lr: 7.50e-06
+     Epoch[0] Iteration[310/384], entropy: 0.4568, uncertainty: 1.8796, loss: 0.2020, lr: 7.50e-06
+     Epoch[0] Iteration[320/384], entropy: 0.1832, uncertainty: 1.8119, loss: 0.0849, lr: 0.00e+00
+     Epoch[0] Iteration[330/384], entropy: 0.2619, uncertainty: 1.7132, loss: 0.1218, lr: 7.50e-06
+     Epoch[0] Iteration[340/384], entropy: 0.1885, uncertainty: 1.7867, loss: 0.0868, lr: 7.50e-06
+     Epoch[0] Iteration[350/384], entropy: 0.4470, uncertainty: 2.0154, loss: 0.2011, lr: 0.00e+00
+     Epoch[0] Iteration[360/384], entropy: 0.5264, uncertainty: 1.9136, loss: 0.2337, lr: 7.50e-06
+     Epoch[0] Iteration[370/384], entropy: 0.5834, uncertainty: 1.9131, loss: 0.2538, lr: 7.50e-06
+     Epoch[0] Iteration[380/384], entropy: 0.4962, uncertainty: 1.9738, loss: 0.2233, lr: 0.00e+00
+     Averaged stats: entropy_avg: 0.3863, uncertainty_avg: 1.8713, loss_avg: 0.1711, lr_avg: 4.93e-06
+     itm tta time 0:01:07
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 0, 'R1': 70.598, 'R5': 86.875, 'R10': 91.813, 'mAP': 63.41, 'mINP': 47.09, 'entropy': 0.38632268497818395, 'uncertainty': 1.8712774232814187, 'loss': 0.1710866824968865, 'lr': 4.934210526315793e-06}
+     Epoch[1] Iteration[10/384], entropy: 0.3539, uncertainty: 1.8321, loss: 0.1623, lr: 9.89e-06
+     Epoch[1] Iteration[20/384], entropy: 0.6322, uncertainty: 2.0092, loss: 0.2796, lr: 3.45e-06
+     Epoch[1] Iteration[30/384], entropy: 0.5515, uncertainty: 1.9646, loss: 0.2314, lr: 1.65e-06
+     Epoch[1] Iteration[40/384], entropy: 0.6137, uncertainty: 2.0751, loss: 0.2579, lr: 9.89e-06
+     Epoch[1] Iteration[50/384], entropy: 0.1525, uncertainty: 1.7440, loss: 0.0727, lr: 3.45e-06
+     Epoch[1] Iteration[60/384], entropy: 0.4879, uncertainty: 2.0018, loss: 0.2215, lr: 1.65e-06
+     Epoch[1] Iteration[70/384], entropy: 0.5340, uncertainty: 1.9293, loss: 0.2244, lr: 9.89e-06
+     Epoch[1] Iteration[80/384], entropy: 0.4583, uncertainty: 1.9112, loss: 0.1991, lr: 3.45e-06
+     Epoch[1] Iteration[90/384], entropy: 0.3715, uncertainty: 1.9137, loss: 0.1580, lr: 1.65e-06
+     Epoch[1] Iteration[100/384], entropy: 0.3000, uncertainty: 1.7595, loss: 0.1402, lr: 9.89e-06
+     Epoch[1] Iteration[110/384], entropy: 0.3768, uncertainty: 1.9581, loss: 0.1590, lr: 3.45e-06
+     Epoch[1] Iteration[120/384], entropy: 0.4664, uncertainty: 1.8215, loss: 0.2118, lr: 1.65e-06
+     Epoch[1] Iteration[130/384], entropy: 0.3521, uncertainty: 1.8591, loss: 0.1613, lr: 9.89e-06
+     Epoch[1] Iteration[140/384], entropy: 0.1407, uncertainty: 1.6702, loss: 0.0755, lr: 3.45e-06
+     Epoch[1] Iteration[150/384], entropy: 0.3192, uncertainty: 1.9549, loss: 0.1433, lr: 1.65e-06
+     Epoch[1] Iteration[160/384], entropy: 0.4486, uncertainty: 1.8741, loss: 0.2039, lr: 9.89e-06
+     Epoch[1] Iteration[170/384], entropy: 0.4571, uncertainty: 1.8264, loss: 0.2019, lr: 3.45e-06
+     Epoch[1] Iteration[180/384], entropy: 0.2468, uncertainty: 1.7453, loss: 0.1223, lr: 1.65e-06
+     Epoch[1] Iteration[190/384], entropy: 0.2733, uncertainty: 1.7614, loss: 0.1170, lr: 9.89e-06
+     Epoch[1] Iteration[200/384], entropy: 0.1931, uncertainty: 1.7493, loss: 0.0879, lr: 3.45e-06
+     Epoch[1] Iteration[210/384], entropy: 0.2932, uncertainty: 1.6732, loss: 0.1261, lr: 1.65e-06
+     Epoch[1] Iteration[220/384], entropy: 0.5261, uncertainty: 2.0134, loss: 0.2289, lr: 9.89e-06
+     Epoch[1] Iteration[230/384], entropy: 0.5325, uncertainty: 1.9185, loss: 0.2275, lr: 3.45e-06
+     Epoch[1] Iteration[240/384], entropy: 0.4853, uncertainty: 2.0100, loss: 0.2103, lr: 1.65e-06
+     Epoch[1] Iteration[250/384], entropy: 0.2584, uncertainty: 1.8157, loss: 0.1148, lr: 9.89e-06
+     Epoch[1] Iteration[260/384], entropy: 0.1508, uncertainty: 1.7513, loss: 0.0702, lr: 3.45e-06
+     Epoch[1] Iteration[270/384], entropy: 0.2102, uncertainty: 1.7607, loss: 0.1000, lr: 1.65e-06
+     Epoch[1] Iteration[280/384], entropy: 0.4048, uncertainty: 1.8894, loss: 0.1774, lr: 9.89e-06
+     Epoch[1] Iteration[290/384], entropy: 0.1646, uncertainty: 1.7507, loss: 0.0806, lr: 3.45e-06
+     Epoch[1] Iteration[300/384], entropy: 0.3819, uncertainty: 1.9285, loss: 0.1729, lr: 1.65e-06
+     Epoch[1] Iteration[310/384], entropy: 0.2280, uncertainty: 1.8221, loss: 0.1002, lr: 9.89e-06
+     Epoch[1] Iteration[320/384], entropy: 0.3626, uncertainty: 1.8616, loss: 0.1583, lr: 3.45e-06
+     Epoch[1] Iteration[330/384], entropy: 0.6742, uncertainty: 1.9684, loss: 0.2937, lr: 1.65e-06
+     Epoch[1] Iteration[340/384], entropy: 0.3216, uncertainty: 1.8325, loss: 0.1495, lr: 9.89e-06
+     Epoch[1] Iteration[350/384], entropy: 0.2855, uncertainty: 1.7681, loss: 0.1368, lr: 3.45e-06
+     Epoch[1] Iteration[360/384], entropy: 0.2278, uncertainty: 1.7515, loss: 0.1119, lr: 1.65e-06
+     Epoch[1] Iteration[370/384], entropy: 0.5440, uncertainty: 2.0263, loss: 0.2400, lr: 9.89e-06
+     Epoch[1] Iteration[380/384], entropy: 0.3581, uncertainty: 1.8028, loss: 0.1578, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3721, uncertainty_avg: 1.8607, loss_avg: 0.1655, lr_avg: 5.09e-06
+     itm tta time 0:01:09
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 1, 'R1': 70.598, 'R5': 86.923, 'R10': 91.845, 'mAP': 63.417, 'mINP': 47.12, 'entropy': 0.37208905031806544, 'uncertainty': 1.86067942882839, 'loss': 0.16546914393180295, 'lr': 5.088043500836674e-06}
+     Epoch[2] Iteration[10/384], entropy: 0.3403, uncertainty: 1.9303, loss: 0.1583, lr: 5.52e-06
+     Epoch[2] Iteration[20/384], entropy: 0.4017, uncertainty: 1.9697, loss: 0.1676, lr: 9.05e-06
+     Epoch[2] Iteration[30/384], entropy: 0.3924, uncertainty: 1.9116, loss: 0.1778, lr: 4.32e-07
+     Epoch[2] Iteration[40/384], entropy: 0.4857, uncertainty: 2.0195, loss: 0.2114, lr: 5.52e-06
+     Epoch[2] Iteration[50/384], entropy: 0.4171, uncertainty: 1.9085, loss: 0.1946, lr: 9.05e-06
+     Epoch[2] Iteration[60/384], entropy: 0.4331, uncertainty: 1.9295, loss: 0.1913, lr: 4.32e-07
+     Epoch[2] Iteration[70/384], entropy: 0.3725, uncertainty: 1.9162, loss: 0.1598, lr: 5.52e-06
+     Epoch[2] Iteration[80/384], entropy: 0.5001, uncertainty: 1.9084, loss: 0.2151, lr: 9.05e-06
+     Epoch[2] Iteration[90/384], entropy: 0.4435, uncertainty: 1.9873, loss: 0.2073, lr: 4.32e-07
+     Epoch[2] Iteration[100/384], entropy: 0.4075, uncertainty: 1.8485, loss: 0.1818, lr: 5.52e-06
+     Epoch[2] Iteration[110/384], entropy: 0.3977, uncertainty: 1.7569, loss: 0.1808, lr: 9.05e-06
+     Epoch[2] Iteration[120/384], entropy: 0.5141, uncertainty: 2.0047, loss: 0.2208, lr: 4.32e-07
+     Epoch[2] Iteration[130/384], entropy: 0.4020, uncertainty: 1.9135, loss: 0.1726, lr: 5.52e-06
+     Epoch[2] Iteration[140/384], entropy: 0.3536, uncertainty: 1.8618, loss: 0.1597, lr: 9.05e-06
+     Epoch[2] Iteration[150/384], entropy: 0.4772, uncertainty: 1.9093, loss: 0.2086, lr: 4.32e-07
+     Epoch[2] Iteration[160/384], entropy: 0.3675, uncertainty: 1.8638, loss: 0.1683, lr: 5.52e-06
+     Epoch[2] Iteration[170/384], entropy: 0.4481, uncertainty: 1.8470, loss: 0.2102, lr: 9.05e-06
+     Epoch[2] Iteration[180/384], entropy: 0.3677, uncertainty: 1.8308, loss: 0.1694, lr: 4.32e-07
+     Epoch[2] Iteration[190/384], entropy: 0.6690, uncertainty: 1.9588, loss: 0.2893, lr: 5.52e-06
+     Epoch[2] Iteration[200/384], entropy: 0.5063, uncertainty: 1.8556, loss: 0.2150, lr: 9.05e-06
+     Epoch[2] Iteration[210/384], entropy: 0.4573, uncertainty: 1.8486, loss: 0.1914, lr: 4.32e-07
+     Epoch[2] Iteration[220/384], entropy: 0.3536, uncertainty: 1.8459, loss: 0.1544, lr: 5.52e-06
+     Epoch[2] Iteration[230/384], entropy: 0.3521, uncertainty: 1.8779, loss: 0.1680, lr: 9.05e-06
+     Epoch[2] Iteration[240/384], entropy: 0.1607, uncertainty: 1.7025, loss: 0.0771, lr: 4.32e-07
+     Epoch[2] Iteration[250/384], entropy: 0.3013, uncertainty: 1.8291, loss: 0.1378, lr: 5.52e-06
+     Epoch[2] Iteration[260/384], entropy: 0.3068, uncertainty: 1.8735, loss: 0.1408, lr: 9.05e-06
+     Epoch[2] Iteration[270/384], entropy: 0.3278, uncertainty: 1.7701, loss: 0.1553, lr: 4.32e-07
+     Epoch[2] Iteration[280/384], entropy: 0.4584, uncertainty: 1.9758, loss: 0.2047, lr: 5.52e-06
+     Epoch[2] Iteration[290/384], entropy: 0.2507, uncertainty: 1.7939, loss: 0.1216, lr: 9.05e-06
+     Epoch[2] Iteration[300/384], entropy: 0.5964, uncertainty: 1.9376, loss: 0.2635, lr: 4.32e-07
+     Epoch[2] Iteration[310/384], entropy: 0.5621, uncertainty: 1.9954, loss: 0.2551, lr: 5.52e-06
+     Epoch[2] Iteration[320/384], entropy: 0.2219, uncertainty: 1.6582, loss: 0.1029, lr: 9.05e-06
+     Epoch[2] Iteration[330/384], entropy: 0.1862, uncertainty: 1.7272, loss: 0.0887, lr: 4.32e-07
+     Epoch[2] Iteration[340/384], entropy: 0.4805, uncertainty: 2.1015, loss: 0.2078, lr: 5.52e-06
+     Epoch[2] Iteration[350/384], entropy: 0.1139, uncertainty: 1.6326, loss: 0.0541, lr: 9.05e-06
+     Epoch[2] Iteration[360/384], entropy: 0.3542, uncertainty: 1.8422, loss: 0.1617, lr: 4.32e-07
+     Epoch[2] Iteration[370/384], entropy: 0.3905, uncertainty: 1.8587, loss: 0.1759, lr: 5.52e-06
+     Epoch[2] Iteration[380/384], entropy: 0.3385, uncertainty: 1.8596, loss: 0.1503, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3924, uncertainty_avg: 1.8753, loss_avg: 0.1756, lr_avg: 5.12e-06
+     itm tta time 0:01:10
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
+|   2   | 70.695 | 86.875 | 91.829 | 63.434 | 47.133 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 2, 'R1': 70.695, 'R5': 86.875, 'R10': 91.829, 'mAP': 63.434, 'mINP': 47.133, 'entropy': 0.3923639729619026, 'uncertainty': 1.8753159704961275, 'loss': 0.1755517240809767, 'lr': 5.120203349689806e-06}
+     Epoch[3] Iteration[10/384], entropy: 0.4326, uncertainty: 1.9981, loss: 0.1901, lr: 4.32e-07
+     Epoch[3] Iteration[20/384], entropy: 0.3454, uncertainty: 1.8263, loss: 0.1515, lr: 9.05e-06
+     Epoch[3] Iteration[30/384], entropy: 0.1634, uncertainty: 1.7417, loss: 0.0821, lr: 5.52e-06
+     Epoch[3] Iteration[40/384], entropy: 0.2676, uncertainty: 1.7118, loss: 0.1183, lr: 4.32e-07
+     Epoch[3] Iteration[50/384], entropy: 0.3569, uncertainty: 2.0260, loss: 0.1652, lr: 9.05e-06
+     Epoch[3] Iteration[60/384], entropy: 0.4738, uncertainty: 1.8031, loss: 0.2087, lr: 5.52e-06
+     Epoch[3] Iteration[70/384], entropy: 0.3578, uncertainty: 1.8443, loss: 0.1607, lr: 4.32e-07
+     Epoch[3] Iteration[80/384], entropy: 0.5572, uncertainty: 2.0522, loss: 0.2371, lr: 9.05e-06
+     Epoch[3] Iteration[90/384], entropy: 0.2592, uncertainty: 1.7231, loss: 0.1193, lr: 5.52e-06
+     Epoch[3] Iteration[100/384], entropy: 0.4376, uncertainty: 2.0503, loss: 0.1925, lr: 4.32e-07
+     Epoch[3] Iteration[110/384], entropy: 0.5321, uncertainty: 1.9873, loss: 0.2329, lr: 9.05e-06
+     Epoch[3] Iteration[120/384], entropy: 0.4091, uncertainty: 1.8217, loss: 0.1895, lr: 5.52e-06
+     Epoch[3] Iteration[130/384], entropy: 0.1845, uncertainty: 1.6564, loss: 0.0837, lr: 4.32e-07
+     Epoch[3] Iteration[140/384], entropy: 0.3909, uncertainty: 1.8541, loss: 0.1723, lr: 9.05e-06
+     Epoch[3] Iteration[150/384], entropy: 0.3451, uncertainty: 1.6907, loss: 0.1584, lr: 5.52e-06
+     Epoch[3] Iteration[160/384], entropy: 0.4188, uncertainty: 1.9949, loss: 0.1851, lr: 4.32e-07
+     Epoch[3] Iteration[170/384], entropy: 0.6103, uncertainty: 2.0001, loss: 0.2763, lr: 9.05e-06
+     Epoch[3] Iteration[180/384], entropy: 0.3027, uncertainty: 1.7662, loss: 0.1358, lr: 5.52e-06
+     Epoch[3] Iteration[190/384], entropy: 0.5135, uncertainty: 1.8730, loss: 0.2394, lr: 4.32e-07
+     Epoch[3] Iteration[200/384], entropy: 0.2689, uncertainty: 1.7863, loss: 0.1207, lr: 9.05e-06
+     Epoch[3] Iteration[210/384], entropy: 0.3405, uncertainty: 1.8708, loss: 0.1490, lr: 5.52e-06
+     Epoch[3] Iteration[220/384], entropy: 0.5114, uncertainty: 2.0159, loss: 0.2245, lr: 4.32e-07
+     Epoch[3] Iteration[230/384], entropy: 0.3464, uncertainty: 1.8884, loss: 0.1461, lr: 9.05e-06
+     Epoch[3] Iteration[240/384], entropy: 0.1922, uncertainty: 1.7549, loss: 0.0894, lr: 5.52e-06
+     Epoch[3] Iteration[250/384], entropy: 0.2302, uncertainty: 1.6226, loss: 0.1136, lr: 4.32e-07
+     Epoch[3] Iteration[260/384], entropy: 0.4689, uncertainty: 1.7984, loss: 0.1973, lr: 9.05e-06
+     Epoch[3] Iteration[270/384], entropy: 0.4358, uncertainty: 1.8600, loss: 0.1968, lr: 5.52e-06
+     Epoch[3] Iteration[280/384], entropy: 0.5590, uncertainty: 1.9983, loss: 0.2437, lr: 4.32e-07
+     Epoch[3] Iteration[290/384], entropy: 0.3822, uncertainty: 1.9628, loss: 0.1742, lr: 9.05e-06
+     Epoch[3] Iteration[300/384], entropy: 0.4756, uncertainty: 1.9123, loss: 0.2160, lr: 5.52e-06
+     Epoch[3] Iteration[310/384], entropy: 0.6286, uncertainty: 2.0106, loss: 0.2759, lr: 4.32e-07
+     Epoch[3] Iteration[320/384], entropy: 0.6151, uncertainty: 2.0436, loss: 0.2550, lr: 9.05e-06
+     Epoch[3] Iteration[330/384], entropy: 0.6726, uncertainty: 2.0706, loss: 0.2778, lr: 5.52e-06
+     Epoch[3] Iteration[340/384], entropy: 0.2980, uncertainty: 1.9288, loss: 0.1348, lr: 4.32e-07
+     Epoch[3] Iteration[350/384], entropy: 0.4477, uncertainty: 1.8961, loss: 0.1996, lr: 9.05e-06
+     Epoch[3] Iteration[360/384], entropy: 0.4165, uncertainty: 1.8846, loss: 0.1781, lr: 5.52e-06
+     Epoch[3] Iteration[370/384], entropy: 0.3492, uncertainty: 1.8392, loss: 0.1631, lr: 4.32e-07
+     Epoch[3] Iteration[380/384], entropy: 0.2977, uncertainty: 1.8490, loss: 0.1401, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.4025, uncertainty_avg: 1.8793, loss_avg: 0.1788, lr_avg: 4.99e-06
+     itm tta time 0:01:09
+     Epoch[4] Iteration[10/384], entropy: 0.1897, uncertainty: 1.8053, loss: 0.0867, lr: 1.65e-06
+     Epoch[4] Iteration[20/384], entropy: 0.2883, uncertainty: 1.9077, loss: 0.1341, lr: 3.45e-06
+     Epoch[4] Iteration[30/384], entropy: 0.6501, uncertainty: 2.0130, loss: 0.2976, lr: 9.89e-06
+     Epoch[4] Iteration[40/384], entropy: 0.6027, uncertainty: 2.0258, loss: 0.2559, lr: 1.65e-06
+     Epoch[4] Iteration[50/384], entropy: 0.2347, uncertainty: 1.8451, loss: 0.1079, lr: 3.45e-06
+     Epoch[4] Iteration[60/384], entropy: 0.3303, uncertainty: 1.7810, loss: 0.1495, lr: 9.89e-06
+     Epoch[4] Iteration[70/384], entropy: 0.4207, uncertainty: 1.8452, loss: 0.1903, lr: 1.65e-06
+     Epoch[4] Iteration[80/384], entropy: 0.4641, uncertainty: 1.8793, loss: 0.1991, lr: 3.45e-06
+     Epoch[4] Iteration[90/384], entropy: 0.4008, uncertainty: 1.8962, loss: 0.1722, lr: 9.89e-06
+     Epoch[4] Iteration[100/384], entropy: 0.5054, uncertainty: 1.8884, loss: 0.2171, lr: 1.65e-06
+     Epoch[4] Iteration[110/384], entropy: 0.2750, uncertainty: 1.7933, loss: 0.1277, lr: 3.45e-06
+     Epoch[4] Iteration[120/384], entropy: 0.6074, uncertainty: 1.9466, loss: 0.2634, lr: 9.89e-06
+     Epoch[4] Iteration[130/384], entropy: 0.4063, uncertainty: 1.8843, loss: 0.1870, lr: 1.65e-06
+     Epoch[4] Iteration[140/384], entropy: 0.4952, uncertainty: 2.0320, loss: 0.2144, lr: 3.45e-06
+     Epoch[4] Iteration[150/384], entropy: 0.5568, uncertainty: 1.9493, loss: 0.2511, lr: 9.89e-06
+     Epoch[4] Iteration[160/384], entropy: 0.2459, uncertainty: 1.6751, loss: 0.1245, lr: 1.65e-06
+     Epoch[4] Iteration[170/384], entropy: 0.4152, uncertainty: 1.9179, loss: 0.1941, lr: 3.45e-06
+     Epoch[4] Iteration[180/384], entropy: 0.6392, uncertainty: 2.0116, loss: 0.2760, lr: 9.89e-06
+     Epoch[4] Iteration[190/384], entropy: 0.4889, uncertainty: 2.0253, loss: 0.2180, lr: 1.65e-06
+     Epoch[4] Iteration[200/384], entropy: 0.2464, uncertainty: 1.7650, loss: 0.1128, lr: 3.45e-06
+     Epoch[4] Iteration[210/384], entropy: 0.4834, uncertainty: 1.8198, loss: 0.2068, lr: 9.89e-06
+     Epoch[4] Iteration[220/384], entropy: 0.4145, uncertainty: 1.8945, loss: 0.1880, lr: 1.65e-06
+     Epoch[4] Iteration[230/384], entropy: 0.3388, uncertainty: 1.8807, loss: 0.1498, lr: 3.45e-06
+     Epoch[4] Iteration[240/384], entropy: 0.5202, uncertainty: 2.0559, loss: 0.2274, lr: 9.89e-06
+     Epoch[4] Iteration[250/384], entropy: 0.5972, uncertainty: 1.9170, loss: 0.2590, lr: 1.65e-06
+     Epoch[4] Iteration[260/384], entropy: 0.2751, uncertainty: 1.7972, loss: 0.1243, lr: 3.45e-06
+     Epoch[4] Iteration[270/384], entropy: 0.4216, uncertainty: 1.9402, loss: 0.1882, lr: 9.89e-06
+     Epoch[4] Iteration[280/384], entropy: 0.3515, uncertainty: 1.8737, loss: 0.1531, lr: 1.65e-06
+     Epoch[4] Iteration[290/384], entropy: 0.3709, uncertainty: 1.7503, loss: 0.1794, lr: 3.45e-06
+     Epoch[4] Iteration[300/384], entropy: 0.6958, uncertainty: 2.0964, loss: 0.2991, lr: 9.89e-06
+     Epoch[4] Iteration[310/384], entropy: 0.6238, uncertainty: 1.9361, loss: 0.2676, lr: 1.65e-06
+     Epoch[4] Iteration[320/384], entropy: 0.4301, uncertainty: 1.9226, loss: 0.1937, lr: 3.45e-06
+     Epoch[4] Iteration[330/384], entropy: 0.4728, uncertainty: 1.9782, loss: 0.2039, lr: 9.89e-06
+     Epoch[4] Iteration[340/384], entropy: 0.5135, uncertainty: 1.9135, loss: 0.2299, lr: 1.65e-06
+     Epoch[4] Iteration[350/384], entropy: 0.2767, uncertainty: 1.8698, loss: 0.1359, lr: 3.45e-06
+     Epoch[4] Iteration[360/384], entropy: 0.3768, uncertainty: 1.8541, loss: 0.1663, lr: 9.89e-06
+     Epoch[4] Iteration[370/384], entropy: 0.5181, uncertainty: 2.0807, loss: 0.2204, lr: 1.65e-06
+     Epoch[4] Iteration[380/384], entropy: 0.4440, uncertainty: 1.8451, loss: 0.1909, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.4365, uncertainty_avg: 1.9030, loss_avg: 0.1938, lr_avg: 4.87e-06
+     itm tta time 0:01:09
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
+|   2   | 70.695 | 86.875 | 91.829 | 63.434 | 47.133 |
+|   4   | 70.776 | 86.842 | 91.813 | 63.468 | 47.187 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 4, 'R1': 70.776, 'R5': 86.842, 'R10': 91.813, 'mAP': 63.468, 'mINP': 47.187, 'entropy': 0.43651833855792094, 'uncertainty': 1.9029853030254966, 'loss': 0.1937658963234801, 'lr': 4.871296368324535e-06}
+     Epoch[5] Iteration[10/384], entropy: 0.4717, uncertainty: 1.8645, loss: 0.1999, lr: 7.50e-06
+     Epoch[5] Iteration[20/384], entropy: 0.1728, uncertainty: 1.8131, loss: 0.0842, lr: 0.00e+00
+     Epoch[5] Iteration[30/384], entropy: 0.5857, uncertainty: 1.9391, loss: 0.2520, lr: 7.50e-06
+     Epoch[5] Iteration[40/384], entropy: 0.3163, uncertainty: 1.8619, loss: 0.1448, lr: 7.50e-06
+     Epoch[5] Iteration[50/384], entropy: 0.3195, uncertainty: 1.8102, loss: 0.1478, lr: 0.00e+00
+     Epoch[5] Iteration[60/384], entropy: 0.4286, uncertainty: 1.8317, loss: 0.1837, lr: 7.50e-06
+     Epoch[5] Iteration[70/384], entropy: 0.2914, uncertainty: 1.8012, loss: 0.1310, lr: 7.50e-06
+     Epoch[5] Iteration[80/384], entropy: 0.3289, uncertainty: 1.8838, loss: 0.1491, lr: 0.00e+00
+     Epoch[5] Iteration[90/384], entropy: 0.4205, uncertainty: 1.8877, loss: 0.1963, lr: 7.50e-06
+     Epoch[5] Iteration[100/384], entropy: 0.5073, uncertainty: 1.9075, loss: 0.2292, lr: 7.50e-06
+     Epoch[5] Iteration[110/384], entropy: 0.1499, uncertainty: 1.6611, loss: 0.0679, lr: 0.00e+00
+     Epoch[5] Iteration[120/384], entropy: 0.4747, uncertainty: 1.8773, loss: 0.2003, lr: 7.50e-06
+     Epoch[5] Iteration[130/384], entropy: 0.4804, uncertainty: 1.8976, loss: 0.2080, lr: 7.50e-06
+     Epoch[5] Iteration[140/384], entropy: 0.2063, uncertainty: 1.8028, loss: 0.1000, lr: 0.00e+00
+     Epoch[5] Iteration[150/384], entropy: 0.2450, uncertainty: 1.8519, loss: 0.1098, lr: 7.50e-06
+     Epoch[5] Iteration[160/384], entropy: 0.2644, uncertainty: 1.9372, loss: 0.1190, lr: 7.50e-06
+     Epoch[5] Iteration[170/384], entropy: 0.4739, uncertainty: 1.9023, loss: 0.2074, lr: 0.00e+00
+     Epoch[5] Iteration[180/384], entropy: 0.2475, uncertainty: 1.8629, loss: 0.1159, lr: 7.50e-06
+     Epoch[5] Iteration[190/384], entropy: 0.3380, uncertainty: 1.8389, loss: 0.1532, lr: 7.50e-06
+     Epoch[5] Iteration[200/384], entropy: 0.4377, uncertainty: 1.9684, loss: 0.1938, lr: 0.00e+00
+     Epoch[5] Iteration[210/384], entropy: 0.4690, uncertainty: 1.8428, loss: 0.2029, lr: 7.50e-06
+     Epoch[5] Iteration[220/384], entropy: 0.3551, uncertainty: 1.7278, loss: 0.1569, lr: 7.50e-06
+     Epoch[5] Iteration[230/384], entropy: 0.2600, uncertainty: 1.7007, loss: 0.1210, lr: 0.00e+00
+     Epoch[5] Iteration[240/384], entropy: 0.5748, uncertainty: 1.9484, loss: 0.2532, lr: 7.50e-06
+     Epoch[5] Iteration[250/384], entropy: 0.5704, uncertainty: 1.9108, loss: 0.2463, lr: 7.50e-06
+     Epoch[5] Iteration[260/384], entropy: 0.2589, uncertainty: 1.8813, loss: 0.1193, lr: 0.00e+00
+     Epoch[5] Iteration[270/384], entropy: 0.4873, uncertainty: 1.9866, loss: 0.2047, lr: 7.50e-06
+     Epoch[5] Iteration[280/384], entropy: 0.1906, uncertainty: 1.8193, loss: 0.0886, lr: 7.50e-06
+     Epoch[5] Iteration[290/384], entropy: 0.2523, uncertainty: 1.7178, loss: 0.1153, lr: 0.00e+00
+     Epoch[5] Iteration[300/384], entropy: 0.5937, uncertainty: 2.0008, loss: 0.2533, lr: 7.50e-06
+     Epoch[5] Iteration[310/384], entropy: 0.6448, uncertainty: 1.9892, loss: 0.2750, lr: 7.50e-06
+     Epoch[5] Iteration[320/384], entropy: 0.3842, uncertainty: 1.9429, loss: 0.1653, lr: 0.00e+00
+     Epoch[5] Iteration[330/384], entropy: 0.4570, uncertainty: 1.9962, loss: 0.2052, lr: 7.50e-06
+     Epoch[5] Iteration[340/384], entropy: 0.3858, uncertainty: 1.9162, loss: 0.1676, lr: 7.50e-06
+     Epoch[5] Iteration[350/384], entropy: 0.3291, uncertainty: 1.8075, loss: 0.1481, lr: 0.00e+00
+     Epoch[5] Iteration[360/384], entropy: 0.1754, uncertainty: 1.7389, loss: 0.0786, lr: 7.50e-06
+     Epoch[5] Iteration[370/384], entropy: 0.4163, uncertainty: 1.9903, loss: 0.1857, lr: 7.50e-06
+     Epoch[5] Iteration[380/384], entropy: 0.1753, uncertainty: 1.6910, loss: 0.0750, lr: 0.00e+00
+     Averaged stats: entropy_avg: 0.3721, uncertainty_avg: 1.8634, loss_avg: 0.1646, lr_avg: 4.93e-06
+     itm tta time 0:01:10
+     Epoch[6] Iteration[10/384], entropy: 0.4520, uncertainty: 2.0675, loss: 0.1972, lr: 9.89e-06
+     Epoch[6] Iteration[20/384], entropy: 0.4407, uncertainty: 1.8969, loss: 0.1895, lr: 3.45e-06
+     Epoch[6] Iteration[30/384], entropy: 0.3128, uncertainty: 1.8834, loss: 0.1322, lr: 1.65e-06
+     Epoch[6] Iteration[40/384], entropy: 0.2233, uncertainty: 1.7414, loss: 0.1052, lr: 9.89e-06
+     Epoch[6] Iteration[50/384], entropy: 0.5978, uncertainty: 1.9978, loss: 0.2591, lr: 3.45e-06
+     Epoch[6] Iteration[60/384], entropy: 0.7895, uncertainty: 2.0653, loss: 0.3386, lr: 1.65e-06
+     Epoch[6] Iteration[70/384], entropy: 0.1440, uncertainty: 1.7309, loss: 0.0644, lr: 9.89e-06
+     Epoch[6] Iteration[80/384], entropy: 0.3191, uncertainty: 1.8741, loss: 0.1430, lr: 3.45e-06
+     Epoch[6] Iteration[90/384], entropy: 0.4432, uncertainty: 1.9421, loss: 0.1929, lr: 1.65e-06
+     Epoch[6] Iteration[100/384], entropy: 0.6731, uncertainty: 1.9584, loss: 0.2914, lr: 9.89e-06
+     Epoch[6] Iteration[110/384], entropy: 0.2420, uncertainty: 1.7677, loss: 0.1049, lr: 3.45e-06
+     Epoch[6] Iteration[120/384], entropy: 0.3445, uncertainty: 1.8005, loss: 0.1519, lr: 1.65e-06
+     Epoch[6] Iteration[130/384], entropy: 0.3447, uncertainty: 1.9131, loss: 0.1547, lr: 9.89e-06
+     Epoch[6] Iteration[140/384], entropy: 0.1101, uncertainty: 1.7070, loss: 0.0517, lr: 3.45e-06
+     Epoch[6] Iteration[150/384], entropy: 0.2730, uncertainty: 1.7876, loss: 0.1220, lr: 1.65e-06
+     Epoch[6] Iteration[160/384], entropy: 0.1311, uncertainty: 1.8198, loss: 0.0638, lr: 9.89e-06
+     Epoch[6] Iteration[170/384], entropy: 0.2971, uncertainty: 1.9003, loss: 0.1392, lr: 3.45e-06
+     Epoch[6] Iteration[180/384], entropy: 0.3575, uncertainty: 1.8308, loss: 0.1568, lr: 1.65e-06
+     Epoch[6] Iteration[190/384], entropy: 0.2968, uncertainty: 1.8617, loss: 0.1428, lr: 9.89e-06
+     Epoch[6] Iteration[200/384], entropy: 0.5818, uncertainty: 2.0096, loss: 0.2448, lr: 3.45e-06
+     Epoch[6] Iteration[210/384], entropy: 0.4125, uncertainty: 1.8151, loss: 0.1705, lr: 1.65e-06
+     Epoch[6] Iteration[220/384], entropy: 0.2588, uncertainty: 1.8131, loss: 0.1262, lr: 9.89e-06
+     Epoch[6] Iteration[230/384], entropy: 0.4001, uncertainty: 1.7927, loss: 0.1725, lr: 3.45e-06
+     Epoch[6] Iteration[240/384], entropy: 0.2984, uncertainty: 1.7068, loss: 0.1384, lr: 1.65e-06
+     Epoch[6] Iteration[250/384], entropy: 0.2207, uncertainty: 1.7235, loss: 0.0994, lr: 9.89e-06
+     Epoch[6] Iteration[260/384], entropy: 0.3460, uncertainty: 1.9107, loss: 0.1544, lr: 3.45e-06
+     Epoch[6] Iteration[270/384], entropy: 0.2221, uncertainty: 1.7035, loss: 0.1045, lr: 1.65e-06
+     Epoch[6] Iteration[280/384], entropy: 0.2745, uncertainty: 1.7959, loss: 0.1226, lr: 9.89e-06
+     Epoch[6] Iteration[290/384], entropy: 0.6574, uncertainty: 2.0715, loss: 0.2840, lr: 3.45e-06
+     Epoch[6] Iteration[300/384], entropy: 0.3377, uncertainty: 1.7841, loss: 0.1517, lr: 1.65e-06
+     Epoch[6] Iteration[310/384], entropy: 0.4841, uncertainty: 1.9738, loss: 0.2109, lr: 9.89e-06
+     Epoch[6] Iteration[320/384], entropy: 0.4348, uncertainty: 1.9869, loss: 0.1827, lr: 3.45e-06
+     Epoch[6] Iteration[330/384], entropy: 0.4209, uncertainty: 1.8617, loss: 0.1807, lr: 1.65e-06
+     Epoch[6] Iteration[340/384], entropy: 0.2278, uncertainty: 1.8485, loss: 0.1058, lr: 9.89e-06
+     Epoch[6] Iteration[350/384], entropy: 0.2247, uncertainty: 1.7959, loss: 0.1072, lr: 3.45e-06
+     Epoch[6] Iteration[360/384], entropy: 0.3568, uncertainty: 1.7940, loss: 0.1595, lr: 1.65e-06
+     Epoch[6] Iteration[370/384], entropy: 0.1801, uncertainty: 1.7418, loss: 0.0837, lr: 9.89e-06
+     Epoch[6] Iteration[380/384], entropy: 0.2692, uncertainty: 1.9670, loss: 0.1324, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3526, uncertainty_avg: 1.8590, loss_avg: 0.1561, lr_avg: 5.09e-06
+     itm tta time 0:01:09
+     Epoch[7] Iteration[10/384], entropy: 0.2964, uncertainty: 1.6709, loss: 0.1392, lr: 5.52e-06
+     Epoch[7] Iteration[20/384], entropy: 0.6688, uncertainty: 2.1340, loss: 0.2909, lr: 9.05e-06
+     Epoch[7] Iteration[30/384], entropy: 0.4602, uncertainty: 1.9341, loss: 0.2100, lr: 4.32e-07
+     Epoch[7] Iteration[40/384], entropy: 0.3342, uncertainty: 1.7931, loss: 0.1456, lr: 5.52e-06
+     Epoch[7] Iteration[50/384], entropy: 0.3400, uncertainty: 1.7772, loss: 0.1532, lr: 9.05e-06
+     Epoch[7] Iteration[60/384], entropy: 0.8578, uncertainty: 2.1189, loss: 0.3642, lr: 4.32e-07
+     Epoch[7] Iteration[70/384], entropy: 0.8447, uncertainty: 2.0990, loss: 0.3600, lr: 5.52e-06
+     Epoch[7] Iteration[80/384], entropy: 0.3249, uncertainty: 1.9553, loss: 0.1537, lr: 9.05e-06
+     Epoch[7] Iteration[90/384], entropy: 0.3859, uncertainty: 1.9301, loss: 0.1699, lr: 4.32e-07
+     Epoch[7] Iteration[100/384], entropy: 0.3809, uncertainty: 1.8385, loss: 0.1739, lr: 5.52e-06
+     Epoch[7] Iteration[110/384], entropy: 0.3573, uncertainty: 1.7736, loss: 0.1688, lr: 9.05e-06
+     Epoch[7] Iteration[120/384], entropy: 0.1839, uncertainty: 1.6922, loss: 0.0892, lr: 4.32e-07
+     Epoch[7] Iteration[130/384], entropy: 0.1974, uncertainty: 1.7565, loss: 0.0885, lr: 5.52e-06
+     Epoch[7] Iteration[140/384], entropy: 0.1691, uncertainty: 1.7728, loss: 0.0874, lr: 9.05e-06
+     Epoch[7] Iteration[150/384], entropy: 0.2374, uncertainty: 1.7497, loss: 0.1057, lr: 4.32e-07
+     Epoch[7] Iteration[160/384], entropy: 0.3800, uncertainty: 1.9574, loss: 0.1717, lr: 5.52e-06
+     Epoch[7] Iteration[170/384], entropy: 0.3177, uncertainty: 1.8027, loss: 0.1390, lr: 9.05e-06
+     Epoch[7] Iteration[180/384], entropy: 0.2499, uncertainty: 1.8845, loss: 0.1133, lr: 4.32e-07
+     Epoch[7] Iteration[190/384], entropy: 0.3515, uncertainty: 1.7456, loss: 0.1497, lr: 5.52e-06
+     Epoch[7] Iteration[200/384], entropy: 0.2497, uncertainty: 1.8316, loss: 0.1113, lr: 9.05e-06
+     Epoch[7] Iteration[210/384], entropy: 0.4447, uncertainty: 1.9552, loss: 0.1996, lr: 4.32e-07
+     Epoch[7] Iteration[220/384], entropy: 0.2974, uncertainty: 1.8387, loss: 0.1266, lr: 5.52e-06
+     Epoch[7] Iteration[230/384], entropy: 0.3384, uncertainty: 1.9473, loss: 0.1452, lr: 9.05e-06
+     Epoch[7] Iteration[240/384], entropy: 0.3950, uncertainty: 1.8351, loss: 0.1717, lr: 4.32e-07
+     Epoch[7] Iteration[250/384], entropy: 0.5553, uncertainty: 1.9486, loss: 0.2530, lr: 5.52e-06
+     Epoch[7] Iteration[260/384], entropy: 0.4007, uncertainty: 1.9926, loss: 0.1834, lr: 9.05e-06
+     Epoch[7] Iteration[270/384], entropy: 0.1701, uncertainty: 1.8077, loss: 0.0822, lr: 4.32e-07
+     Epoch[7] Iteration[280/384], entropy: 0.4857, uncertainty: 1.8645, loss: 0.2153, lr: 5.52e-06
+     Epoch[7] Iteration[290/384], entropy: 0.2214, uncertainty: 1.7598, loss: 0.0947, lr: 9.05e-06
+     Epoch[7] Iteration[300/384], entropy: 0.7537, uncertainty: 2.2117, loss: 0.3165, lr: 4.32e-07
+     Epoch[7] Iteration[310/384], entropy: 0.2320, uncertainty: 1.7535, loss: 0.1075, lr: 5.52e-06
+     Epoch[7] Iteration[320/384], entropy: 0.2793, uncertainty: 1.8286, loss: 0.1284, lr: 9.05e-06
+     Epoch[7] Iteration[330/384], entropy: 0.3376, uncertainty: 1.9372, loss: 0.1507, lr: 4.32e-07
+     Epoch[7] Iteration[340/384], entropy: 0.1612, uncertainty: 1.8181, loss: 0.0773, lr: 5.52e-06
+     Epoch[7] Iteration[350/384], entropy: 0.5017, uncertainty: 2.0067, loss: 0.2180, lr: 9.05e-06
+     Epoch[7] Iteration[360/384], entropy: 0.1991, uncertainty: 1.7280, loss: 0.0962, lr: 4.32e-07
+     Epoch[7] Iteration[370/384], entropy: 0.2862, uncertainty: 1.7682, loss: 0.1286, lr: 5.52e-06
+     Epoch[7] Iteration[380/384], entropy: 0.1572, uncertainty: 1.7632, loss: 0.0734, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3633, uncertainty_avg: 1.8680, loss_avg: 0.1619, lr_avg: 5.12e-06
+     itm tta time 0:01:09
+     Epoch[8] Iteration[10/384], entropy: 0.4041, uncertainty: 1.9891, loss: 0.1798, lr: 4.32e-07
+     Epoch[8] Iteration[20/384], entropy: 0.4663, uncertainty: 2.0631, loss: 0.2015, lr: 9.05e-06
+     Epoch[8] Iteration[30/384], entropy: 0.2733, uncertainty: 1.9219, loss: 0.1221, lr: 5.52e-06
+     Epoch[8] Iteration[40/384], entropy: 0.3356, uncertainty: 1.8272, loss: 0.1496, lr: 4.32e-07
+     Epoch[8] Iteration[50/384], entropy: 0.4440, uncertainty: 1.9257, loss: 0.1891, lr: 9.05e-06
+     Epoch[8] Iteration[60/384], entropy: 0.3373, uncertainty: 1.8738, loss: 0.1551, lr: 5.52e-06
+     Epoch[8] Iteration[70/384], entropy: 0.4533, uncertainty: 1.9547, loss: 0.1953, lr: 4.32e-07
+     Epoch[8] Iteration[80/384], entropy: 0.1898, uncertainty: 1.7428, loss: 0.0826, lr: 9.05e-06
+     Epoch[8] Iteration[90/384], entropy: 0.3825, uncertainty: 1.9326, loss: 0.1747, lr: 5.52e-06
+     Epoch[8] Iteration[100/384], entropy: 0.3364, uncertainty: 1.8901, loss: 0.1477, lr: 4.32e-07
+     Epoch[8] Iteration[110/384], entropy: 0.5386, uncertainty: 1.9698, loss: 0.2364, lr: 9.05e-06
+     Epoch[8] Iteration[120/384], entropy: 0.3588, uncertainty: 1.9808, loss: 0.1597, lr: 5.52e-06
+     Epoch[8] Iteration[130/384], entropy: 0.2599, uncertainty: 1.6468, loss: 0.1196, lr: 4.32e-07
+     Epoch[8] Iteration[140/384], entropy: 0.2588, uncertainty: 1.8836, loss: 0.1173, lr: 9.05e-06
+     Epoch[8] Iteration[150/384], entropy: 0.4268, uncertainty: 1.8535, loss: 0.1885, lr: 5.52e-06
+     Epoch[8] Iteration[160/384], entropy: 0.5817, uncertainty: 2.0660, loss: 0.2486, lr: 4.32e-07
+     Epoch[8] Iteration[170/384], entropy: 0.2252, uncertainty: 1.7878, loss: 0.1008, lr: 9.05e-06
+     Epoch[8] Iteration[180/384], entropy: 0.4118, uncertainty: 1.9358, loss: 0.1876, lr: 5.52e-06
+     Epoch[8] Iteration[190/384], entropy: 0.3186, uncertainty: 1.8519, loss: 0.1423, lr: 4.32e-07
+     Epoch[8] Iteration[200/384], entropy: 0.5851, uncertainty: 2.0076, loss: 0.2551, lr: 9.05e-06
+     Epoch[8] Iteration[210/384], entropy: 0.6710, uncertainty: 2.0317, loss: 0.2883, lr: 5.52e-06
+     Epoch[8] Iteration[220/384], entropy: 0.4363, uncertainty: 1.9122, loss: 0.1843, lr: 4.32e-07
+     Epoch[8] Iteration[230/384], entropy: 0.3590, uncertainty: 1.8322, loss: 0.1586, lr: 9.05e-06
+     Epoch[8] Iteration[240/384], entropy: 0.4407, uncertainty: 1.9391, loss: 0.1924, lr: 5.52e-06
+     Epoch[8] Iteration[250/384], entropy: 0.1394, uncertainty: 1.6876, loss: 0.0744, lr: 4.32e-07
+     Epoch[8] Iteration[260/384], entropy: 0.2287, uncertainty: 1.7348, loss: 0.1090, lr: 9.05e-06
+     Epoch[8] Iteration[270/384], entropy: 0.3838, uncertainty: 1.9452, loss: 0.1714, lr: 5.52e-06
+     Epoch[8] Iteration[280/384], entropy: 0.4409, uncertainty: 1.9698, loss: 0.1964, lr: 4.32e-07
+     Epoch[8] Iteration[290/384], entropy: 0.3705, uncertainty: 1.8466, loss: 0.1664, lr: 9.05e-06
+     Epoch[8] Iteration[300/384], entropy: 0.1410, uncertainty: 1.6873, loss: 0.0670, lr: 5.52e-06
+     Epoch[8] Iteration[310/384], entropy: 0.1815, uncertainty: 1.6743, loss: 0.0887, lr: 4.32e-07
+     Epoch[8] Iteration[320/384], entropy: 0.3073, uncertainty: 2.0447, loss: 0.1364, lr: 9.05e-06
+     Epoch[8] Iteration[330/384], entropy: 0.3673, uncertainty: 1.9075, loss: 0.1567, lr: 5.52e-06
+     Epoch[8] Iteration[340/384], entropy: 0.6194, uncertainty: 2.0331, loss: 0.2694, lr: 4.32e-07
+     Epoch[8] Iteration[350/384], entropy: 0.4644, uncertainty: 2.0745, loss: 0.2018, lr: 9.05e-06
+     Epoch[8] Iteration[360/384], entropy: 0.3300, uncertainty: 1.8999, loss: 0.1551, lr: 5.52e-06
+     Epoch[8] Iteration[370/384], entropy: 0.3679, uncertainty: 1.9274, loss: 0.1623, lr: 4.32e-07
+     Epoch[8] Iteration[380/384], entropy: 0.3629, uncertainty: 1.9436, loss: 0.1551, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3737, uncertainty_avg: 1.8999, loss_avg: 0.1655, lr_avg: 4.99e-06
+     itm tta time 0:01:09
+     Epoch[9] Iteration[10/384], entropy: 0.1098, uncertainty: 1.6840, loss: 0.0539, lr: 1.65e-06
+     Epoch[9] Iteration[20/384], entropy: 0.4330, uncertainty: 1.8369, loss: 0.1917, lr: 3.45e-06
+     Epoch[9] Iteration[30/384], entropy: 0.4967, uncertainty: 1.9601, loss: 0.2143, lr: 9.89e-06
+     Epoch[9] Iteration[40/384], entropy: 0.2551, uncertainty: 1.8842, loss: 0.1240, lr: 1.65e-06
+     Epoch[9] Iteration[50/384], entropy: 0.6257, uncertainty: 1.9880, loss: 0.2820, lr: 3.45e-06
+     Epoch[9] Iteration[60/384], entropy: 0.3254, uncertainty: 1.7552, loss: 0.1452, lr: 9.89e-06
+     Epoch[9] Iteration[70/384], entropy: 0.3241, uncertainty: 1.9075, loss: 0.1438, lr: 1.65e-06
+     Epoch[9] Iteration[80/384], entropy: 0.3381, uncertainty: 1.8486, loss: 0.1538, lr: 3.45e-06
+     Epoch[9] Iteration[90/384], entropy: 0.4403, uncertainty: 2.0505, loss: 0.1924, lr: 9.89e-06
+     Epoch[9] Iteration[100/384], entropy: 0.5002, uncertainty: 2.0090, loss: 0.2250, lr: 1.65e-06
+     Epoch[9] Iteration[110/384], entropy: 0.3927, uncertainty: 1.8106, loss: 0.1829, lr: 3.45e-06
+     Epoch[9] Iteration[120/384], entropy: 0.4795, uncertainty: 2.0251, loss: 0.2106, lr: 9.89e-06
+     Epoch[9] Iteration[130/384], entropy: 0.2636, uncertainty: 1.7362, loss: 0.1264, lr: 1.65e-06
+     Epoch[9] Iteration[140/384], entropy: 0.1999, uncertainty: 1.7049, loss: 0.0948, lr: 3.45e-06
+     Epoch[9] Iteration[150/384], entropy: 0.2597, uncertainty: 1.7237, loss: 0.1182, lr: 9.89e-06
+     Epoch[9] Iteration[160/384], entropy: 0.5010, uncertainty: 1.9936, loss: 0.2277, lr: 1.65e-06
+     Epoch[9] Iteration[170/384], entropy: 0.4781, uncertainty: 1.9909, loss: 0.2092, lr: 3.45e-06
+     Epoch[9] Iteration[180/384], entropy: 0.5780, uncertainty: 1.9947, loss: 0.2483, lr: 9.89e-06
+     Epoch[9] Iteration[190/384], entropy: 0.5613, uncertainty: 2.0144, loss: 0.2415, lr: 1.65e-06
+     Epoch[9] Iteration[200/384], entropy: 0.4461, uncertainty: 1.9838, loss: 0.2005, lr: 3.45e-06
+     Epoch[9] Iteration[210/384], entropy: 0.3778, uncertainty: 1.8460, loss: 0.1635, lr: 9.89e-06
+     Epoch[9] Iteration[220/384], entropy: 0.5391, uncertainty: 2.0014, loss: 0.2426, lr: 1.65e-06
+     Epoch[9] Iteration[230/384], entropy: 0.4519, uncertainty: 2.0045, loss: 0.2017, lr: 3.45e-06
+     Epoch[9] Iteration[240/384], entropy: 0.3850, uncertainty: 1.7595, loss: 0.1632, lr: 9.89e-06
+     Epoch[9] Iteration[250/384], entropy: 0.4660, uncertainty: 1.9875, loss: 0.2020, lr: 1.65e-06
+     Epoch[9] Iteration[260/384], entropy: 0.2926, uncertainty: 1.9786, loss: 0.1348, lr: 3.45e-06
+     Epoch[9] Iteration[270/384], entropy: 0.3389, uncertainty: 1.8701, loss: 0.1496, lr: 9.89e-06
+     Epoch[9] Iteration[280/384], entropy: 0.3870, uncertainty: 1.9136, loss: 0.1623, lr: 1.65e-06
+     Epoch[9] Iteration[290/384], entropy: 0.3841, uncertainty: 1.7090, loss: 0.1638, lr: 3.45e-06
+     Epoch[9] Iteration[300/384], entropy: 0.5546, uncertainty: 1.9490, loss: 0.2401, lr: 9.89e-06
+     Epoch[9] Iteration[310/384], entropy: 0.2556, uncertainty: 1.8609, loss: 0.1215, lr: 1.65e-06
+     Epoch[9] Iteration[320/384], entropy: 0.3820, uncertainty: 1.8316, loss: 0.1715, lr: 3.45e-06
+     Epoch[9] Iteration[330/384], entropy: 0.5346, uncertainty: 1.9756, loss: 0.2326, lr: 9.89e-06
+     Epoch[9] Iteration[340/384], entropy: 0.4952, uncertainty: 1.9448, loss: 0.2164, lr: 1.65e-06
+     Epoch[9] Iteration[350/384], entropy: 0.3349, uncertainty: 1.9674, loss: 0.1480, lr: 3.45e-06
+     Epoch[9] Iteration[360/384], entropy: 0.5505, uncertainty: 1.9394, loss: 0.2351, lr: 9.89e-06
+     Epoch[9] Iteration[370/384], entropy: 0.3223, uncertainty: 1.8998, loss: 0.1413, lr: 1.65e-06
+     Epoch[9] Iteration[380/384], entropy: 0.3510, uncertainty: 1.8155, loss: 0.1539, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.4056, uncertainty_avg: 1.8988, loss_avg: 0.1797, lr_avg: 4.87e-06
+     itm tta time 0:01:09
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
+|   2   | 70.695 | 86.875 | 91.829 | 63.434 | 47.133 |
+|   4   | 70.776 | 86.842 | 91.813 | 63.468 | 47.187 |
+|   9   | 70.809 | 86.907 | 91.862 | 63.469 | 47.192 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 9, 'R1': 70.809, 'R5': 86.907, 'R10': 91.862, 'mAP': 63.469, 'mINP': 47.192, 'entropy': 0.40556732878873225, 'uncertainty': 1.898841302645834, 'loss': 0.17974134652238144, 'lr': 4.871296368324585e-06}
+     Epoch[10] Iteration[10/384], entropy: 0.4898, uncertainty: 1.9814, loss: 0.2117, lr: 7.50e-06
+     Epoch[10] Iteration[20/384], entropy: 0.4443, uncertainty: 2.0395, loss: 0.1948, lr: 0.00e+00
+     Epoch[10] Iteration[30/384], entropy: 0.4685, uncertainty: 1.8832, loss: 0.2115, lr: 7.50e-06
+     Epoch[10] Iteration[40/384], entropy: 0.5190, uncertainty: 2.0125, loss: 0.2247, lr: 7.50e-06
+     Epoch[10] Iteration[50/384], entropy: 0.6320, uncertainty: 1.9487, loss: 0.2755, lr: 0.00e+00
+     Epoch[10] Iteration[60/384], entropy: 0.6060, uncertainty: 1.9997, loss: 0.2560, lr: 7.50e-06
+     Epoch[10] Iteration[70/384], entropy: 0.5511, uncertainty: 1.9554, loss: 0.2406, lr: 7.50e-06
+     Epoch[10] Iteration[80/384], entropy: 0.3657, uncertainty: 1.8743, loss: 0.1595, lr: 0.00e+00
+     Epoch[10] Iteration[90/384], entropy: 0.3041, uncertainty: 1.8459, loss: 0.1496, lr: 7.50e-06
+     Epoch[10] Iteration[100/384], entropy: 0.2143, uncertainty: 1.8669, loss: 0.1027, lr: 7.50e-06
+     Epoch[10] Iteration[110/384], entropy: 0.5291, uncertainty: 1.8741, loss: 0.2249, lr: 0.00e+00
+     Epoch[10] Iteration[120/384], entropy: 0.4872, uncertainty: 1.9130, loss: 0.2139, lr: 7.50e-06
+     Epoch[10] Iteration[130/384], entropy: 0.2152, uncertainty: 1.8077, loss: 0.1046, lr: 7.50e-06
+     Epoch[10] Iteration[140/384], entropy: 0.3842, uncertainty: 1.8300, loss: 0.1719, lr: 0.00e+00
+     Epoch[10] Iteration[150/384], entropy: 0.2369, uncertainty: 1.7812, loss: 0.1074, lr: 7.50e-06
+     Epoch[10] Iteration[160/384], entropy: 0.4576, uncertainty: 1.9264, loss: 0.2034, lr: 7.50e-06
+     Epoch[10] Iteration[170/384], entropy: 0.3381, uncertainty: 1.8878, loss: 0.1422, lr: 0.00e+00
+     Epoch[10] Iteration[180/384], entropy: 0.1880, uncertainty: 1.6023, loss: 0.0838, lr: 7.50e-06
+     Epoch[10] Iteration[190/384], entropy: 0.6033, uncertainty: 1.9377, loss: 0.2568, lr: 7.50e-06
+     Epoch[10] Iteration[200/384], entropy: 0.4000, uncertainty: 1.9319, loss: 0.1735, lr: 0.00e+00
+     Epoch[10] Iteration[210/384], entropy: 0.3163, uncertainty: 1.9755, loss: 0.1500, lr: 7.50e-06
+     Epoch[10] Iteration[220/384], entropy: 0.5146, uncertainty: 1.8892, loss: 0.2204, lr: 7.50e-06
+     Epoch[10] Iteration[230/384], entropy: 0.5599, uncertainty: 2.0712, loss: 0.2365, lr: 0.00e+00
+     Epoch[10] Iteration[240/384], entropy: 0.4980, uncertainty: 1.8284, loss: 0.2152, lr: 7.50e-06
+     Epoch[10] Iteration[250/384], entropy: 0.2307, uncertainty: 1.8520, loss: 0.1078, lr: 7.50e-06
+     Epoch[10] Iteration[260/384], entropy: 0.2703, uncertainty: 1.9795, loss: 0.1185, lr: 0.00e+00
+     Epoch[10] Iteration[270/384], entropy: 0.1623, uncertainty: 1.7453, loss: 0.0743, lr: 7.50e-06
+     Epoch[10] Iteration[280/384], entropy: 0.4708, uncertainty: 1.8504, loss: 0.2071, lr: 7.50e-06
+     Epoch[10] Iteration[290/384], entropy: 0.4758, uncertainty: 1.8168, loss: 0.1989, lr: 0.00e+00
+     Epoch[10] Iteration[300/384], entropy: 0.3589, uncertainty: 1.8316, loss: 0.1552, lr: 7.50e-06
+     Epoch[10] Iteration[310/384], entropy: 0.2113, uncertainty: 1.7193, loss: 0.0961, lr: 7.50e-06
+     Epoch[10] Iteration[320/384], entropy: 0.5072, uncertainty: 1.9240, loss: 0.2219, lr: 0.00e+00
+     Epoch[10] Iteration[330/384], entropy: 0.6190, uncertainty: 2.0164, loss: 0.2620, lr: 7.50e-06
+     Epoch[10] Iteration[340/384], entropy: 0.4912, uncertainty: 1.8987, loss: 0.2078, lr: 7.50e-06
+     Epoch[10] Iteration[350/384], entropy: 0.4876, uncertainty: 1.8683, loss: 0.2202, lr: 0.00e+00
+     Epoch[10] Iteration[360/384], entropy: 0.3569, uncertainty: 2.0321, loss: 0.1660, lr: 7.50e-06
+     Epoch[10] Iteration[370/384], entropy: 0.2764, uncertainty: 1.7506, loss: 0.1185, lr: 7.50e-06
+     Epoch[10] Iteration[380/384], entropy: 0.5134, uncertainty: 1.8606, loss: 0.2165, lr: 0.00e+00
+     Averaged stats: entropy_avg: 0.4146, uncertainty_avg: 1.8897, loss_avg: 0.1816, lr_avg: 4.93e-06
+     itm tta time 0:01:10
+     Epoch[11] Iteration[10/384], entropy: 0.4264, uncertainty: 1.9963, loss: 0.1881, lr: 9.89e-06
+     Epoch[11] Iteration[20/384], entropy: 0.3171, uncertainty: 1.9543, loss: 0.1389, lr: 3.45e-06
+     Epoch[11] Iteration[30/384], entropy: 0.5054, uncertainty: 1.9269, loss: 0.2168, lr: 1.65e-06
+     Epoch[11] Iteration[40/384], entropy: 0.6268, uncertainty: 1.9073, loss: 0.2624, lr: 9.89e-06
+     Epoch[11] Iteration[50/384], entropy: 0.3479, uncertainty: 1.8760, loss: 0.1538, lr: 3.45e-06
+     Epoch[11] Iteration[60/384], entropy: 0.4922, uncertainty: 1.9422, loss: 0.2096, lr: 1.65e-06
+     Epoch[11] Iteration[70/384], entropy: 0.6399, uncertainty: 1.9123, loss: 0.2785, lr: 9.89e-06
+     Epoch[11] Iteration[80/384], entropy: 0.4367, uncertainty: 1.9440, loss: 0.1907, lr: 3.45e-06
+     Epoch[11] Iteration[90/384], entropy: 0.3855, uncertainty: 1.8825, loss: 0.1703, lr: 1.65e-06
+     Epoch[11] Iteration[100/384], entropy: 0.2534, uncertainty: 1.8462, loss: 0.1132, lr: 9.89e-06
+     Epoch[11] Iteration[110/384], entropy: 0.2769, uncertainty: 1.8696, loss: 0.1244, lr: 3.45e-06
+     Epoch[11] Iteration[120/384], entropy: 0.2552, uncertainty: 1.7761, loss: 0.1223, lr: 1.65e-06
+     Epoch[11] Iteration[130/384], entropy: 0.5460, uncertainty: 2.0619, loss: 0.2357, lr: 9.89e-06
+     Epoch[11] Iteration[140/384], entropy: 0.3443, uncertainty: 1.7882, loss: 0.1501, lr: 3.45e-06
+     Epoch[11] Iteration[150/384], entropy: 0.3226, uncertainty: 1.9755, loss: 0.1489, lr: 1.65e-06
+     Epoch[11] Iteration[160/384], entropy: 0.3752, uncertainty: 1.8720, loss: 0.1615, lr: 9.89e-06
+     Epoch[11] Iteration[170/384], entropy: 0.3883, uncertainty: 1.8517, loss: 0.1789, lr: 3.45e-06
+     Epoch[11] Iteration[180/384], entropy: 0.1431, uncertainty: 1.6393, loss: 0.0786, lr: 1.65e-06
+     Epoch[11] Iteration[190/384], entropy: 0.2123, uncertainty: 1.7461, loss: 0.0992, lr: 9.89e-06
+     Epoch[11] Iteration[200/384], entropy: 0.2426, uncertainty: 1.7829, loss: 0.1111, lr: 3.45e-06
+     Epoch[11] Iteration[210/384], entropy: 0.3751, uncertainty: 1.9237, loss: 0.1635, lr: 1.65e-06
+     Epoch[11] Iteration[220/384], entropy: 0.1827, uncertainty: 1.5960, loss: 0.0887, lr: 9.89e-06
+     Epoch[11] Iteration[230/384], entropy: 0.3339, uncertainty: 1.9592, loss: 0.1498, lr: 3.45e-06
+     Epoch[11] Iteration[240/384], entropy: 0.3947, uncertainty: 1.8988, loss: 0.1876, lr: 1.65e-06
+     Epoch[11] Iteration[250/384], entropy: 0.2421, uncertainty: 1.8986, loss: 0.1151, lr: 9.89e-06
+     Epoch[11] Iteration[260/384], entropy: 0.2207, uncertainty: 1.8217, loss: 0.1103, lr: 3.45e-06
+     Epoch[11] Iteration[270/384], entropy: 0.4380, uncertainty: 1.9762, loss: 0.1959, lr: 1.65e-06
+     Epoch[11] Iteration[280/384], entropy: 0.4047, uncertainty: 1.8705, loss: 0.1766, lr: 9.89e-06
+     Epoch[11] Iteration[290/384], entropy: 0.4696, uncertainty: 1.9937, loss: 0.2071, lr: 3.45e-06
+     Epoch[11] Iteration[300/384], entropy: 0.4054, uncertainty: 2.0303, loss: 0.1814, lr: 1.65e-06
+     Epoch[11] Iteration[310/384], entropy: 0.3574, uncertainty: 1.9262, loss: 0.1635, lr: 9.89e-06
+     Epoch[11] Iteration[320/384], entropy: 0.3178, uncertainty: 1.7857, loss: 0.1436, lr: 3.45e-06
+     Epoch[11] Iteration[330/384], entropy: 0.3796, uncertainty: 1.9416, loss: 0.1631, lr: 1.65e-06
+     Epoch[11] Iteration[340/384], entropy: 0.2608, uncertainty: 1.8484, loss: 0.1136, lr: 9.89e-06
+     Epoch[11] Iteration[350/384], entropy: 0.4115, uncertainty: 1.8727, loss: 0.1741, lr: 3.45e-06
+     Epoch[11] Iteration[360/384], entropy: 0.4424, uncertainty: 2.0257, loss: 0.1919, lr: 1.65e-06
+     Epoch[11] Iteration[370/384], entropy: 0.4666, uncertainty: 1.9651, loss: 0.2106, lr: 9.89e-06
+     Epoch[11] Iteration[380/384], entropy: 0.4476, uncertainty: 1.8817, loss: 0.2200, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3707, uncertainty_avg: 1.8886, loss_avg: 0.1655, lr_avg: 5.09e-06
+     itm tta time 0:01:09
+     Epoch[12] Iteration[10/384], entropy: 0.4185, uncertainty: 1.8995, loss: 0.1950, lr: 5.52e-06
+     Epoch[12] Iteration[20/384], entropy: 0.4959, uncertainty: 1.8397, loss: 0.2147, lr: 9.05e-06
+     Epoch[12] Iteration[30/384], entropy: 0.4322, uncertainty: 1.7974, loss: 0.1854, lr: 4.32e-07
+     Epoch[12] Iteration[40/384], entropy: 0.1759, uncertainty: 1.6713, loss: 0.0827, lr: 5.52e-06
+     Epoch[12] Iteration[50/384], entropy: 0.2647, uncertainty: 1.8138, loss: 0.1160, lr: 9.05e-06
+     Epoch[12] Iteration[60/384], entropy: 0.4930, uncertainty: 1.9668, loss: 0.2073, lr: 4.32e-07
+     Epoch[12] Iteration[70/384], entropy: 0.4024, uncertainty: 1.9271, loss: 0.1767, lr: 5.52e-06
+     Epoch[12] Iteration[80/384], entropy: 0.1835, uncertainty: 1.6887, loss: 0.0811, lr: 9.05e-06
+     Epoch[12] Iteration[90/384], entropy: 0.3479, uncertainty: 1.7545, loss: 0.1547, lr: 4.32e-07
+     Epoch[12] Iteration[100/384], entropy: 0.4195, uncertainty: 1.9925, loss: 0.1841, lr: 5.52e-06
+     Epoch[12] Iteration[110/384], entropy: 0.3588, uncertainty: 1.6619, loss: 0.1587, lr: 9.05e-06
+     Epoch[12] Iteration[120/384], entropy: 0.4166, uncertainty: 1.8442, loss: 0.1946, lr: 4.32e-07
+     Epoch[12] Iteration[130/384], entropy: 0.3508, uncertainty: 1.8812, loss: 0.1673, lr: 5.52e-06
+     Epoch[12] Iteration[140/384], entropy: 0.2451, uncertainty: 1.6003, loss: 0.1116, lr: 9.05e-06
+     Epoch[12] Iteration[150/384], entropy: 0.3798, uncertainty: 1.8904, loss: 0.1685, lr: 4.32e-07
+     Epoch[12] Iteration[160/384], entropy: 0.4435, uncertainty: 1.9967, loss: 0.1958, lr: 5.52e-06
+     Epoch[12] Iteration[170/384], entropy: 0.3698, uncertainty: 1.9237, loss: 0.1588, lr: 9.05e-06
+     Epoch[12] Iteration[180/384], entropy: 0.3924, uncertainty: 1.8544, loss: 0.1678, lr: 4.32e-07
+     Epoch[12] Iteration[190/384], entropy: 0.2765, uncertainty: 1.7109, loss: 0.1244, lr: 5.52e-06
+     Epoch[12] Iteration[200/384], entropy: 0.3965, uncertainty: 1.8403, loss: 0.1759, lr: 9.05e-06
+     Epoch[12] Iteration[210/384], entropy: 0.3167, uncertainty: 1.8649, loss: 0.1435, lr: 4.32e-07
+     Epoch[12] Iteration[220/384], entropy: 0.4219, uncertainty: 1.9301, loss: 0.1894, lr: 5.52e-06
+     Epoch[12] Iteration[230/384], entropy: 0.2518, uncertainty: 1.8051, loss: 0.1109, lr: 9.05e-06
+     Epoch[12] Iteration[240/384], entropy: 0.4272, uncertainty: 1.9856, loss: 0.1870, lr: 4.32e-07
+     Epoch[12] Iteration[250/384], entropy: 0.3276, uncertainty: 1.7792, loss: 0.1425, lr: 5.52e-06
+     Epoch[12] Iteration[260/384], entropy: 0.3073, uncertainty: 1.8134, loss: 0.1377, lr: 9.05e-06
+     Epoch[12] Iteration[270/384], entropy: 0.3364, uncertainty: 1.9121, loss: 0.1533, lr: 4.32e-07
+     Epoch[12] Iteration[280/384], entropy: 0.4816, uncertainty: 2.0042, loss: 0.2188, lr: 5.52e-06
+     Epoch[12] Iteration[290/384], entropy: 0.1564, uncertainty: 1.7972, loss: 0.0739, lr: 9.05e-06
+     Epoch[12] Iteration[300/384], entropy: 0.4458, uncertainty: 1.9399, loss: 0.2034, lr: 4.32e-07
+     Epoch[12] Iteration[310/384], entropy: 0.5584, uncertainty: 1.9210, loss: 0.2463, lr: 5.52e-06
+     Epoch[12] Iteration[320/384], entropy: 0.4037, uncertainty: 1.8463, loss: 0.1762, lr: 9.05e-06
+     Epoch[12] Iteration[330/384], entropy: 0.3805, uncertainty: 1.8650, loss: 0.1656, lr: 4.32e-07
+     Epoch[12] Iteration[340/384], entropy: 0.4134, uncertainty: 1.8726, loss: 0.1724, lr: 5.52e-06
+     Epoch[12] Iteration[350/384], entropy: 0.5779, uncertainty: 1.9740, loss: 0.2484, lr: 9.05e-06
+     Epoch[12] Iteration[360/384], entropy: 0.5037, uncertainty: 1.9653, loss: 0.2252, lr: 4.32e-07
+     Epoch[12] Iteration[370/384], entropy: 0.5777, uncertainty: 1.9194, loss: 0.2585, lr: 5.52e-06
+     Epoch[12] Iteration[380/384], entropy: 0.4597, uncertainty: 1.8855, loss: 0.1974, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3845, uncertainty_avg: 1.8589, loss_avg: 0.1703, lr_avg: 5.12e-06
+     itm tta time 0:01:08
+     Epoch[13] Iteration[10/384], entropy: 0.3541, uncertainty: 1.8181, loss: 0.1572, lr: 4.32e-07
+     Epoch[13] Iteration[20/384], entropy: 0.4088, uncertainty: 1.8245, loss: 0.1813, lr: 9.05e-06
+     Epoch[13] Iteration[30/384], entropy: 0.2706, uncertainty: 1.7161, loss: 0.1313, lr: 5.52e-06
+     Epoch[13] Iteration[40/384], entropy: 0.5213, uncertainty: 1.9890, loss: 0.2258, lr: 4.32e-07
+     Epoch[13] Iteration[50/384], entropy: 0.3829, uncertainty: 1.9766, loss: 0.1753, lr: 9.05e-06
+     Epoch[13] Iteration[60/384], entropy: 0.4584, uncertainty: 1.8377, loss: 0.2009, lr: 5.52e-06
+     Epoch[13] Iteration[70/384], entropy: 0.1728, uncertainty: 1.8169, loss: 0.0820, lr: 4.32e-07
+     Epoch[13] Iteration[80/384], entropy: 0.3821, uncertainty: 1.8775, loss: 0.1697, lr: 9.05e-06
+     Epoch[13] Iteration[90/384], entropy: 0.2069, uncertainty: 1.6863, loss: 0.0924, lr: 5.52e-06
+     Epoch[13] Iteration[100/384], entropy: 0.3929, uncertainty: 1.8985, loss: 0.1830, lr: 4.32e-07
+     Epoch[13] Iteration[110/384], entropy: 0.2634, uncertainty: 1.7962, loss: 0.1256, lr: 9.05e-06
+     Epoch[13] Iteration[120/384], entropy: 0.2711, uncertainty: 1.8139, loss: 0.1271, lr: 5.52e-06
+     Epoch[13] Iteration[130/384], entropy: 0.1722, uncertainty: 1.7530, loss: 0.0791, lr: 4.32e-07
+     Epoch[13] Iteration[140/384], entropy: 0.5365, uncertainty: 1.9229, loss: 0.2397, lr: 9.05e-06
+     Epoch[13] Iteration[150/384], entropy: 0.5154, uncertainty: 2.0161, loss: 0.2181, lr: 5.52e-06
+     Epoch[13] Iteration[160/384], entropy: 0.6719, uncertainty: 2.0211, loss: 0.2937, lr: 4.32e-07
+     Epoch[13] Iteration[170/384], entropy: 0.5598, uncertainty: 2.0071, loss: 0.2425, lr: 9.05e-06
+     Epoch[13] Iteration[180/384], entropy: 0.3800, uncertainty: 1.9127, loss: 0.1653, lr: 5.52e-06
+     Epoch[13] Iteration[190/384], entropy: 0.6333, uncertainty: 2.0613, loss: 0.2756, lr: 4.32e-07
+     Epoch[13] Iteration[200/384], entropy: 0.5232, uncertainty: 1.8957, loss: 0.2381, lr: 9.05e-06
+     Epoch[13] Iteration[210/384], entropy: 0.4102, uncertainty: 1.8549, loss: 0.1790, lr: 5.52e-06
+     Epoch[13] Iteration[220/384], entropy: 0.4558, uncertainty: 1.8935, loss: 0.2019, lr: 4.32e-07
+     Epoch[13] Iteration[230/384], entropy: 0.3893, uncertainty: 1.8507, loss: 0.1722, lr: 9.05e-06
+     Epoch[13] Iteration[240/384], entropy: 0.4709, uncertainty: 1.8955, loss: 0.2002, lr: 5.52e-06
+     Epoch[13] Iteration[250/384], entropy: 0.4080, uncertainty: 1.9576, loss: 0.1895, lr: 4.32e-07
+     Epoch[13] Iteration[260/384], entropy: 0.2127, uncertainty: 1.8162, loss: 0.1026, lr: 9.05e-06
+     Epoch[13] Iteration[270/384], entropy: 0.2424, uncertainty: 1.7180, loss: 0.1069, lr: 5.52e-06
+     Epoch[13] Iteration[280/384], entropy: 0.5523, uncertainty: 1.9281, loss: 0.2373, lr: 4.32e-07
+     Epoch[13] Iteration[290/384], entropy: 0.3989, uncertainty: 1.9089, loss: 0.1801, lr: 9.05e-06
+     Epoch[13] Iteration[300/384], entropy: 0.4915, uncertainty: 1.9327, loss: 0.2159, lr: 5.52e-06
+     Epoch[13] Iteration[310/384], entropy: 0.4941, uncertainty: 1.9895, loss: 0.2113, lr: 4.32e-07
+     Epoch[13] Iteration[320/384], entropy: 0.2636, uncertainty: 1.7856, loss: 0.1164, lr: 9.05e-06
+     Epoch[13] Iteration[330/384], entropy: 0.3515, uncertainty: 1.9497, loss: 0.1582, lr: 5.52e-06
+     Epoch[13] Iteration[340/384], entropy: 0.2569, uncertainty: 1.9135, loss: 0.1151, lr: 4.32e-07
+     Epoch[13] Iteration[350/384], entropy: 0.4552, uncertainty: 1.7540, loss: 0.1918, lr: 9.05e-06
+     Epoch[13] Iteration[360/384], entropy: 0.2863, uncertainty: 1.8255, loss: 0.1285, lr: 5.52e-06
+     Epoch[13] Iteration[370/384], entropy: 0.4551, uncertainty: 1.8319, loss: 0.1905, lr: 4.32e-07
+     Epoch[13] Iteration[380/384], entropy: 0.3039, uncertainty: 1.9060, loss: 0.1422, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3941, uncertainty_avg: 1.8777, loss_avg: 0.1748, lr_avg: 4.99e-06
+     itm tta time 0:01:08
+     Epoch[14] Iteration[10/384], entropy: 0.3117, uncertainty: 1.7752, loss: 0.1346, lr: 1.65e-06
+     Epoch[14] Iteration[20/384], entropy: 0.4444, uncertainty: 1.9494, loss: 0.1955, lr: 3.45e-06
+     Epoch[14] Iteration[30/384], entropy: 0.3630, uncertainty: 1.9587, loss: 0.1621, lr: 9.89e-06
+     Epoch[14] Iteration[40/384], entropy: 0.5043, uncertainty: 1.9624, loss: 0.2126, lr: 1.65e-06
+     Epoch[14] Iteration[50/384], entropy: 0.3208, uncertainty: 1.8565, loss: 0.1527, lr: 3.45e-06
+     Epoch[14] Iteration[60/384], entropy: 0.4319, uncertainty: 1.8784, loss: 0.1856, lr: 9.89e-06
+     Epoch[14] Iteration[70/384], entropy: 0.2250, uncertainty: 1.8201, loss: 0.1076, lr: 1.65e-06
+     Epoch[14] Iteration[80/384], entropy: 0.2667, uncertainty: 1.7913, loss: 0.1248, lr: 3.45e-06
+     Epoch[14] Iteration[90/384], entropy: 0.7293, uncertainty: 1.9871, loss: 0.3073, lr: 9.89e-06
+     Epoch[14] Iteration[100/384], entropy: 0.4056, uncertainty: 1.9531, loss: 0.1754, lr: 1.65e-06
+     Epoch[14] Iteration[110/384], entropy: 0.1163, uncertainty: 1.7045, loss: 0.0548, lr: 3.45e-06
+     Epoch[14] Iteration[120/384], entropy: 0.4722, uncertainty: 1.9447, loss: 0.2009, lr: 9.89e-06
+     Epoch[14] Iteration[130/384], entropy: 0.3350, uncertainty: 1.8383, loss: 0.1479, lr: 1.65e-06
+     Epoch[14] Iteration[140/384], entropy: 0.3617, uncertainty: 1.8676, loss: 0.1594, lr: 3.45e-06
+     Epoch[14] Iteration[150/384], entropy: 0.3672, uncertainty: 1.8500, loss: 0.1701, lr: 9.89e-06
+     Epoch[14] Iteration[160/384], entropy: 0.3684, uncertainty: 1.9601, loss: 0.1635, lr: 1.65e-06
+     Epoch[14] Iteration[170/384], entropy: 0.3858, uncertainty: 1.8613, loss: 0.1781, lr: 3.45e-06
+     Epoch[14] Iteration[180/384], entropy: 0.3376, uncertainty: 1.7478, loss: 0.1499, lr: 9.89e-06
+     Epoch[14] Iteration[190/384], entropy: 0.4351, uncertainty: 1.7924, loss: 0.1873, lr: 1.65e-06
+     Epoch[14] Iteration[200/384], entropy: 0.2804, uncertainty: 1.8928, loss: 0.1300, lr: 3.45e-06
+     Epoch[14] Iteration[210/384], entropy: 0.4360, uncertainty: 1.9074, loss: 0.1868, lr: 9.89e-06
+     Epoch[14] Iteration[220/384], entropy: 0.4542, uncertainty: 1.9385, loss: 0.1989, lr: 1.65e-06
+     Epoch[14] Iteration[230/384], entropy: 0.4305, uncertainty: 1.9072, loss: 0.1935, lr: 3.45e-06
+     Epoch[14] Iteration[240/384], entropy: 0.2709, uncertainty: 1.7860, loss: 0.1289, lr: 9.89e-06
+     Epoch[14] Iteration[250/384], entropy: 0.2562, uncertainty: 1.7218, loss: 0.1118, lr: 1.65e-06
+     Epoch[14] Iteration[260/384], entropy: 0.2575, uncertainty: 1.7261, loss: 0.1120, lr: 3.45e-06
+     Epoch[14] Iteration[270/384], entropy: 0.2144, uncertainty: 1.7811, loss: 0.0954, lr: 9.89e-06
+     Epoch[14] Iteration[280/384], entropy: 0.2475, uncertainty: 1.8147, loss: 0.1170, lr: 1.65e-06
+     Epoch[14] Iteration[290/384], entropy: 0.5860, uncertainty: 2.0524, loss: 0.2604, lr: 3.45e-06
+     Epoch[14] Iteration[300/384], entropy: 0.6001, uncertainty: 1.9824, loss: 0.2568, lr: 9.89e-06
+     Epoch[14] Iteration[310/384], entropy: 0.4309, uncertainty: 1.9253, loss: 0.1892, lr: 1.65e-06
+     Epoch[14] Iteration[320/384], entropy: 0.4312, uncertainty: 1.8470, loss: 0.1943, lr: 3.45e-06
+     Epoch[14] Iteration[330/384], entropy: 0.3344, uncertainty: 1.9530, loss: 0.1499, lr: 9.89e-06
+     Epoch[14] Iteration[340/384], entropy: 0.2948, uncertainty: 1.7673, loss: 0.1274, lr: 1.65e-06
+     Epoch[14] Iteration[350/384], entropy: 0.3417, uncertainty: 1.8592, loss: 0.1492, lr: 3.45e-06
+     Epoch[14] Iteration[360/384], entropy: 0.6171, uncertainty: 2.0357, loss: 0.2704, lr: 9.89e-06
+     Epoch[14] Iteration[370/384], entropy: 0.2643, uncertainty: 1.8086, loss: 0.1242, lr: 1.65e-06
+     Epoch[14] Iteration[380/384], entropy: 0.3373, uncertainty: 1.8833, loss: 0.1587, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3755, uncertainty_avg: 1.8708, loss_avg: 0.1664, lr_avg: 4.87e-06
+     itm tta time 0:01:08
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
+|   2   | 70.695 | 86.875 | 91.829 | 63.434 | 47.133 |
+|   4   | 70.776 | 86.842 | 91.813 | 63.468 | 47.187 |
+|   9   | 70.809 | 86.907 | 91.862 | 63.469 | 47.192 |
+|   14  | 70.825 | 86.940 | 91.862 | 63.479 | 47.219 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 14, 'R1': 70.825, 'R5': 86.94, 'R10': 91.862, 'mAP': 63.479, 'mINP': 47.219, 'entropy': 0.37545639864708247, 'uncertainty': 1.8707580597777116, 'loss': 0.16644361144617983, 'lr': 4.871296368324322e-06}
+     Epoch[15] Iteration[10/384], entropy: 0.2484, uncertainty: 1.8358, loss: 0.1076, lr: 7.50e-06
+     Epoch[15] Iteration[20/384], entropy: 0.3895, uncertainty: 1.8266, loss: 0.1762, lr: 0.00e+00
+     Epoch[15] Iteration[30/384], entropy: 0.2353, uncertainty: 1.7704, loss: 0.1134, lr: 7.50e-06
+     Epoch[15] Iteration[40/384], entropy: 0.3160, uncertainty: 1.8116, loss: 0.1431, lr: 7.50e-06
+     Epoch[15] Iteration[50/384], entropy: 0.4435, uncertainty: 1.7562, loss: 0.1945, lr: 0.00e+00
+     Epoch[15] Iteration[60/384], entropy: 0.2736, uncertainty: 1.8696, loss: 0.1377, lr: 7.50e-06
+     Epoch[15] Iteration[70/384], entropy: 0.3694, uncertainty: 2.0801, loss: 0.1606, lr: 7.50e-06
+     Epoch[15] Iteration[80/384], entropy: 0.1626, uncertainty: 1.7897, loss: 0.0773, lr: 0.00e+00
+     Epoch[15] Iteration[90/384], entropy: 0.1394, uncertainty: 1.7350, loss: 0.0705, lr: 7.50e-06
+     Epoch[15] Iteration[100/384], entropy: 0.2780, uncertainty: 1.8868, loss: 0.1231, lr: 7.50e-06
+     Epoch[15] Iteration[110/384], entropy: 0.4373, uncertainty: 1.9564, loss: 0.1859, lr: 0.00e+00
+     Epoch[15] Iteration[120/384], entropy: 0.2051, uncertainty: 1.6807, loss: 0.0999, lr: 7.50e-06
+     Epoch[15] Iteration[130/384], entropy: 0.7300, uncertainty: 1.9942, loss: 0.3096, lr: 7.50e-06
+     Epoch[15] Iteration[140/384], entropy: 0.5310, uncertainty: 1.9957, loss: 0.2299, lr: 0.00e+00
+     Epoch[15] Iteration[150/384], entropy: 0.3386, uncertainty: 1.9063, loss: 0.1506, lr: 7.50e-06
+     Epoch[15] Iteration[160/384], entropy: 0.2556, uncertainty: 1.7539, loss: 0.1208, lr: 7.50e-06
+     Epoch[15] Iteration[170/384], entropy: 0.2579, uncertainty: 1.7431, loss: 0.1302, lr: 0.00e+00
+     Epoch[15] Iteration[180/384], entropy: 0.5161, uncertainty: 2.0357, loss: 0.2185, lr: 7.50e-06
+     Epoch[15] Iteration[190/384], entropy: 0.4376, uncertainty: 1.8419, loss: 0.1942, lr: 7.50e-06
+     Epoch[15] Iteration[200/384], entropy: 0.1551, uncertainty: 1.7855, loss: 0.0794, lr: 0.00e+00
+     Epoch[15] Iteration[210/384], entropy: 0.5656, uncertainty: 1.8811, loss: 0.2489, lr: 7.50e-06
+     Epoch[15] Iteration[220/384], entropy: 0.4001, uncertainty: 1.9111, loss: 0.1828, lr: 7.50e-06
+     Epoch[15] Iteration[230/384], entropy: 0.3321, uncertainty: 1.8006, loss: 0.1468, lr: 0.00e+00
+     Epoch[15] Iteration[240/384], entropy: 0.3161, uncertainty: 1.8098, loss: 0.1377, lr: 7.50e-06
+     Epoch[15] Iteration[250/384], entropy: 0.4512, uncertainty: 1.9138, loss: 0.2046, lr: 7.50e-06
+     Epoch[15] Iteration[260/384], entropy: 0.4797, uncertainty: 1.8669, loss: 0.2173, lr: 0.00e+00
+     Epoch[15] Iteration[270/384], entropy: 0.5357, uncertainty: 1.9326, loss: 0.2331, lr: 7.50e-06
+     Epoch[15] Iteration[280/384], entropy: 0.3703, uncertainty: 1.8730, loss: 0.1581, lr: 7.50e-06
+     Epoch[15] Iteration[290/384], entropy: 0.5604, uncertainty: 2.0695, loss: 0.2404, lr: 0.00e+00
+     Epoch[15] Iteration[300/384], entropy: 0.4613, uncertainty: 1.8974, loss: 0.2004, lr: 7.50e-06
+     Epoch[15] Iteration[310/384], entropy: 0.6861, uncertainty: 1.9825, loss: 0.2926, lr: 7.50e-06
+     Epoch[15] Iteration[320/384], entropy: 0.2711, uncertainty: 1.7663, loss: 0.1230, lr: 0.00e+00
+     Epoch[15] Iteration[330/384], entropy: 0.3282, uncertainty: 1.8269, loss: 0.1477, lr: 7.50e-06
+     Epoch[15] Iteration[340/384], entropy: 0.2956, uncertainty: 1.8348, loss: 0.1303, lr: 7.50e-06
+     Epoch[15] Iteration[350/384], entropy: 0.5529, uncertainty: 1.9366, loss: 0.2381, lr: 0.00e+00
+     Epoch[15] Iteration[360/384], entropy: 0.3906, uncertainty: 1.9521, loss: 0.1710, lr: 7.50e-06
+     Epoch[15] Iteration[370/384], entropy: 0.5285, uncertainty: 1.9477, loss: 0.2256, lr: 7.50e-06
+     Epoch[15] Iteration[380/384], entropy: 0.5945, uncertainty: 2.1202, loss: 0.2512, lr: 0.00e+00
+     Averaged stats: entropy_avg: 0.3905, uncertainty_avg: 1.8784, loss_avg: 0.1730, lr_avg: 4.93e-06
+     itm tta time 0:01:11
+     Epoch[16] Iteration[10/384], entropy: 0.4699, uncertainty: 1.7664, loss: 0.1984, lr: 9.89e-06
+     Epoch[16] Iteration[20/384], entropy: 0.1653, uncertainty: 1.6781, loss: 0.0731, lr: 3.45e-06
+     Epoch[16] Iteration[30/384], entropy: 0.2112, uncertainty: 1.8131, loss: 0.0954, lr: 1.65e-06
+     Epoch[16] Iteration[40/384], entropy: 0.3078, uncertainty: 1.8334, loss: 0.1414, lr: 9.89e-06
+     Epoch[16] Iteration[50/384], entropy: 0.4077, uncertainty: 1.8858, loss: 0.1761, lr: 3.45e-06
+     Epoch[16] Iteration[60/384], entropy: 0.2412, uncertainty: 1.9410, loss: 0.1063, lr: 1.65e-06
+     Epoch[16] Iteration[70/384], entropy: 0.4138, uncertainty: 1.9833, loss: 0.1829, lr: 9.89e-06
+     Epoch[16] Iteration[80/384], entropy: 0.4056, uncertainty: 1.8027, loss: 0.1780, lr: 3.45e-06
+     Epoch[16] Iteration[90/384], entropy: 0.5590, uncertainty: 2.0376, loss: 0.2389, lr: 1.65e-06
+     Epoch[16] Iteration[100/384], entropy: 0.5496, uncertainty: 1.9955, loss: 0.2504, lr: 9.89e-06
+     Epoch[16] Iteration[110/384], entropy: 0.3147, uncertainty: 1.8108, loss: 0.1470, lr: 3.45e-06
+     Epoch[16] Iteration[120/384], entropy: 0.3048, uncertainty: 1.8965, loss: 0.1406, lr: 1.65e-06
+     Epoch[16] Iteration[130/384], entropy: 0.3315, uncertainty: 1.9083, loss: 0.1547, lr: 9.89e-06
+     Epoch[16] Iteration[140/384], entropy: 0.3446, uncertainty: 1.8607, loss: 0.1553, lr: 3.45e-06
+     Epoch[16] Iteration[150/384], entropy: 0.4906, uncertainty: 1.9780, loss: 0.2121, lr: 1.65e-06
+     Epoch[16] Iteration[160/384], entropy: 0.5465, uncertainty: 2.0548, loss: 0.2321, lr: 9.89e-06
+     Epoch[16] Iteration[170/384], entropy: 0.3220, uncertainty: 1.9235, loss: 0.1415, lr: 3.45e-06
+     Epoch[16] Iteration[180/384], entropy: 0.5525, uncertainty: 1.9720, loss: 0.2403, lr: 1.65e-06
+     Epoch[16] Iteration[190/384], entropy: 0.4130, uncertainty: 1.8991, loss: 0.1741, lr: 9.89e-06
+     Epoch[16] Iteration[200/384], entropy: 0.4325, uncertainty: 1.9544, loss: 0.1857, lr: 3.45e-06
+     Epoch[16] Iteration[210/384], entropy: 0.2171, uncertainty: 1.8770, loss: 0.1015, lr: 1.65e-06
+     Epoch[16] Iteration[220/384], entropy: 0.2838, uncertainty: 1.8692, loss: 0.1327, lr: 9.89e-06
+     Epoch[16] Iteration[230/384], entropy: 0.4019, uncertainty: 1.9190, loss: 0.1821, lr: 3.45e-06
+     Epoch[16] Iteration[240/384], entropy: 0.5021, uncertainty: 1.9614, loss: 0.2193, lr: 1.65e-06
+     Epoch[16] Iteration[250/384], entropy: 0.2743, uncertainty: 1.8250, loss: 0.1204, lr: 9.89e-06
+     Epoch[16] Iteration[260/384], entropy: 0.4183, uncertainty: 2.0018, loss: 0.1850, lr: 3.45e-06
+     Epoch[16] Iteration[270/384], entropy: 0.4423, uncertainty: 1.7911, loss: 0.1914, lr: 1.65e-06
+     Epoch[16] Iteration[280/384], entropy: 0.3370, uncertainty: 1.8713, loss: 0.1449, lr: 9.89e-06
+     Epoch[16] Iteration[290/384], entropy: 0.2659, uncertainty: 1.9666, loss: 0.1200, lr: 3.45e-06
+     Epoch[16] Iteration[300/384], entropy: 0.3847, uncertainty: 1.7689, loss: 0.1712, lr: 1.65e-06
+     Epoch[16] Iteration[310/384], entropy: 0.2797, uncertainty: 1.7141, loss: 0.1273, lr: 9.89e-06
+     Epoch[16] Iteration[320/384], entropy: 0.3711, uncertainty: 1.9030, loss: 0.1621, lr: 3.45e-06
+     Epoch[16] Iteration[330/384], entropy: 0.6049, uncertainty: 1.9594, loss: 0.2654, lr: 1.65e-06
+     Epoch[16] Iteration[340/384], entropy: 0.6294, uncertainty: 2.1038, loss: 0.2769, lr: 9.89e-06
+     Epoch[16] Iteration[350/384], entropy: 0.1813, uncertainty: 1.8424, loss: 0.0847, lr: 3.45e-06
+     Epoch[16] Iteration[360/384], entropy: 0.1035, uncertainty: 1.8274, loss: 0.0556, lr: 1.65e-06
+     Epoch[16] Iteration[370/384], entropy: 0.4320, uncertainty: 1.9476, loss: 0.1962, lr: 9.89e-06
+     Epoch[16] Iteration[380/384], entropy: 0.3265, uncertainty: 1.8945, loss: 0.1457, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3747, uncertainty_avg: 1.8958, loss_avg: 0.1660, lr_avg: 5.09e-06
+     itm tta time 0:01:11
+     Epoch[17] Iteration[10/384], entropy: 0.3449, uncertainty: 1.8986, loss: 0.1492, lr: 5.52e-06
+     Epoch[17] Iteration[20/384], entropy: 0.3331, uncertainty: 2.0563, loss: 0.1450, lr: 9.05e-06
+     Epoch[17] Iteration[30/384], entropy: 0.4784, uncertainty: 2.0255, loss: 0.2154, lr: 4.32e-07
+     Epoch[17] Iteration[40/384], entropy: 0.5286, uncertainty: 2.0658, loss: 0.2351, lr: 5.52e-06
+     Epoch[17] Iteration[50/384], entropy: 0.4817, uncertainty: 1.9299, loss: 0.2025, lr: 9.05e-06
+     Epoch[17] Iteration[60/384], entropy: 0.6516, uncertainty: 1.9639, loss: 0.2929, lr: 4.32e-07
+     Epoch[17] Iteration[70/384], entropy: 0.6596, uncertainty: 2.0589, loss: 0.2870, lr: 5.52e-06
+     Epoch[17] Iteration[80/384], entropy: 0.3395, uncertainty: 1.8478, loss: 0.1486, lr: 9.05e-06
+     Epoch[17] Iteration[90/384], entropy: 0.4554, uncertainty: 1.9865, loss: 0.1998, lr: 4.32e-07
+     Epoch[17] Iteration[100/384], entropy: 0.3048, uncertainty: 1.9637, loss: 0.1382, lr: 5.52e-06
+     Epoch[17] Iteration[110/384], entropy: 0.4661, uncertainty: 1.9690, loss: 0.1914, lr: 9.05e-06
+     Epoch[17] Iteration[120/384], entropy: 0.4589, uncertainty: 1.9033, loss: 0.1913, lr: 4.32e-07
+     Epoch[17] Iteration[130/384], entropy: 0.4839, uncertainty: 1.9618, loss: 0.2112, lr: 5.52e-06
+     Epoch[17] Iteration[140/384], entropy: 0.3818, uncertainty: 1.8302, loss: 0.1837, lr: 9.05e-06
+     Epoch[17] Iteration[150/384], entropy: 0.2063, uncertainty: 1.9143, loss: 0.0964, lr: 4.32e-07
+     Epoch[17] Iteration[160/384], entropy: 0.5380, uncertainty: 1.9055, loss: 0.2464, lr: 5.52e-06
+     Epoch[17] Iteration[170/384], entropy: 0.3385, uncertainty: 1.7973, loss: 0.1479, lr: 9.05e-06
+     Epoch[17] Iteration[180/384], entropy: 0.3443, uncertainty: 1.7678, loss: 0.1577, lr: 4.32e-07
+     Epoch[17] Iteration[190/384], entropy: 0.5787, uncertainty: 2.0589, loss: 0.2472, lr: 5.52e-06
+     Epoch[17] Iteration[200/384], entropy: 0.4574, uncertainty: 1.8609, loss: 0.2007, lr: 9.05e-06
+     Epoch[17] Iteration[210/384], entropy: 0.5309, uncertainty: 1.9733, loss: 0.2246, lr: 4.32e-07
+     Epoch[17] Iteration[220/384], entropy: 0.4731, uncertainty: 1.9482, loss: 0.2112, lr: 5.52e-06
+     Epoch[17] Iteration[230/384], entropy: 0.6397, uncertainty: 2.0271, loss: 0.2827, lr: 9.05e-06
+     Epoch[17] Iteration[240/384], entropy: 0.2162, uncertainty: 1.6586, loss: 0.0955, lr: 4.32e-07
+     Epoch[17] Iteration[250/384], entropy: 0.4101, uncertainty: 1.9892, loss: 0.1760, lr: 5.52e-06
+     Epoch[17] Iteration[260/384], entropy: 0.3943, uncertainty: 1.7793, loss: 0.1689, lr: 9.05e-06
+     Epoch[17] Iteration[270/384], entropy: 0.5549, uncertainty: 1.9799, loss: 0.2335, lr: 4.32e-07
+     Epoch[17] Iteration[280/384], entropy: 0.3488, uncertainty: 1.8572, loss: 0.1568, lr: 5.52e-06
+     Epoch[17] Iteration[290/384], entropy: 0.5455, uncertainty: 1.9465, loss: 0.2327, lr: 9.05e-06
+     Epoch[17] Iteration[300/384], entropy: 0.4727, uncertainty: 2.0022, loss: 0.2180, lr: 4.32e-07
+     Epoch[17] Iteration[310/384], entropy: 0.2457, uncertainty: 1.7871, loss: 0.1200, lr: 5.52e-06
+     Epoch[17] Iteration[320/384], entropy: 0.4141, uncertainty: 1.9019, loss: 0.1795, lr: 9.05e-06
+     Epoch[17] Iteration[330/384], entropy: 0.2986, uncertainty: 1.8220, loss: 0.1350, lr: 4.32e-07
+     Epoch[17] Iteration[340/384], entropy: 0.4023, uncertainty: 1.8259, loss: 0.1814, lr: 5.52e-06
+     Epoch[17] Iteration[350/384], entropy: 0.3368, uncertainty: 1.7661, loss: 0.1474, lr: 9.05e-06
+     Epoch[17] Iteration[360/384], entropy: 0.2531, uncertainty: 1.7808, loss: 0.1185, lr: 4.32e-07
+     Epoch[17] Iteration[370/384], entropy: 0.2775, uncertainty: 1.8003, loss: 0.1290, lr: 5.52e-06
+     Epoch[17] Iteration[380/384], entropy: 0.4114, uncertainty: 1.9910, loss: 0.1796, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.4226, uncertainty_avg: 1.9106, loss_avg: 0.1863, lr_avg: 5.12e-06
+     itm tta time 0:01:12
+     Epoch[18] Iteration[10/384], entropy: 0.5950, uncertainty: 2.0957, loss: 0.2584, lr: 4.32e-07
+     Epoch[18] Iteration[20/384], entropy: 0.1706, uncertainty: 1.8993, loss: 0.0812, lr: 9.05e-06
+     Epoch[18] Iteration[30/384], entropy: 0.4526, uncertainty: 1.9443, loss: 0.2102, lr: 5.52e-06
+     Epoch[18] Iteration[40/384], entropy: 0.5620, uncertainty: 1.9763, loss: 0.2360, lr: 4.32e-07
+     Epoch[18] Iteration[50/384], entropy: 0.3540, uncertainty: 1.7451, loss: 0.1542, lr: 9.05e-06
+     Epoch[18] Iteration[60/384], entropy: 0.2027, uncertainty: 1.7038, loss: 0.0956, lr: 5.52e-06
+     Epoch[18] Iteration[70/384], entropy: 0.6122, uncertainty: 1.9602, loss: 0.2648, lr: 4.32e-07
+     Epoch[18] Iteration[80/384], entropy: 0.2352, uncertainty: 1.6974, loss: 0.1109, lr: 9.05e-06
+     Epoch[18] Iteration[90/384], entropy: 0.2920, uncertainty: 1.8577, loss: 0.1324, lr: 5.52e-06
+     Epoch[18] Iteration[100/384], entropy: 0.4855, uncertainty: 1.8808, loss: 0.2104, lr: 4.32e-07
+     Epoch[18] Iteration[110/384], entropy: 0.2643, uncertainty: 1.7515, loss: 0.1252, lr: 9.05e-06
+     Epoch[18] Iteration[120/384], entropy: 0.3170, uncertainty: 1.8006, loss: 0.1487, lr: 5.52e-06
+     Epoch[18] Iteration[130/384], entropy: 0.4693, uncertainty: 1.8300, loss: 0.1959, lr: 4.32e-07
+     Epoch[18] Iteration[140/384], entropy: 0.5179, uncertainty: 1.9571, loss: 0.2246, lr: 9.05e-06
+     Epoch[18] Iteration[150/384], entropy: 0.3340, uncertainty: 1.8660, loss: 0.1479, lr: 5.52e-06
+     Epoch[18] Iteration[160/384], entropy: 0.3288, uncertainty: 1.8778, loss: 0.1483, lr: 4.32e-07
+     Epoch[18] Iteration[170/384], entropy: 0.3913, uncertainty: 1.9129, loss: 0.1671, lr: 9.05e-06
+     Epoch[18] Iteration[180/384], entropy: 0.3636, uncertainty: 2.0192, loss: 0.1702, lr: 5.52e-06
+     Epoch[18] Iteration[190/384], entropy: 0.4308, uncertainty: 1.8478, loss: 0.1912, lr: 4.32e-07
+     Epoch[18] Iteration[200/384], entropy: 0.3624, uncertainty: 1.8338, loss: 0.1675, lr: 9.05e-06
+     Epoch[18] Iteration[210/384], entropy: 0.2929, uncertainty: 1.9979, loss: 0.1291, lr: 5.52e-06
+     Epoch[18] Iteration[220/384], entropy: 0.4779, uncertainty: 1.9695, loss: 0.2049, lr: 4.32e-07
+     Epoch[18] Iteration[230/384], entropy: 0.2507, uncertainty: 1.9390, loss: 0.1108, lr: 9.05e-06
+     Epoch[18] Iteration[240/384], entropy: 0.2560, uncertainty: 1.8184, loss: 0.1179, lr: 5.52e-06
+     Epoch[18] Iteration[250/384], entropy: 0.3484, uncertainty: 1.7924, loss: 0.1555, lr: 4.32e-07
+     Epoch[18] Iteration[260/384], entropy: 0.1156, uncertainty: 1.7788, loss: 0.0579, lr: 9.05e-06
+     Epoch[18] Iteration[270/384], entropy: 0.4840, uncertainty: 1.9912, loss: 0.2206, lr: 5.52e-06
+     Epoch[18] Iteration[280/384], entropy: 0.4336, uncertainty: 1.8893, loss: 0.2008, lr: 4.32e-07
+     Epoch[18] Iteration[290/384], entropy: 0.3575, uncertainty: 1.8755, loss: 0.1529, lr: 9.05e-06
+     Epoch[18] Iteration[300/384], entropy: 0.3027, uncertainty: 1.6975, loss: 0.1315, lr: 5.52e-06
+     Epoch[18] Iteration[310/384], entropy: 0.2357, uncertainty: 1.7690, loss: 0.1098, lr: 4.32e-07
+     Epoch[18] Iteration[320/384], entropy: 0.4136, uncertainty: 1.9492, loss: 0.1773, lr: 9.05e-06
+     Epoch[18] Iteration[330/384], entropy: 0.4980, uncertainty: 1.9296, loss: 0.2148, lr: 5.52e-06
+     Epoch[18] Iteration[340/384], entropy: 0.3284, uncertainty: 1.7920, loss: 0.1465, lr: 4.32e-07
+     Epoch[18] Iteration[350/384], entropy: 0.3114, uncertainty: 1.9037, loss: 0.1402, lr: 9.05e-06
+     Epoch[18] Iteration[360/384], entropy: 0.4528, uncertainty: 1.9529, loss: 0.1974, lr: 5.52e-06
+     Epoch[18] Iteration[370/384], entropy: 0.3778, uncertainty: 1.9355, loss: 0.1736, lr: 4.32e-07
+     Epoch[18] Iteration[380/384], entropy: 0.1950, uncertainty: 1.8282, loss: 0.0872, lr: 9.05e-06
+     Averaged stats: entropy_avg: 0.3651, uncertainty_avg: 1.8754, loss_avg: 0.1624, lr_avg: 4.99e-06
+     itm tta time 0:01:09
+     Epoch[19] Iteration[10/384], entropy: 0.3446, uncertainty: 2.0272, loss: 0.1519, lr: 1.65e-06
+     Epoch[19] Iteration[20/384], entropy: 0.4451, uncertainty: 2.0119, loss: 0.1912, lr: 3.45e-06
+     Epoch[19] Iteration[30/384], entropy: 0.3343, uncertainty: 1.8718, loss: 0.1605, lr: 9.89e-06
+     Epoch[19] Iteration[40/384], entropy: 0.2531, uncertainty: 1.7392, loss: 0.1130, lr: 1.65e-06
+     Epoch[19] Iteration[50/384], entropy: 0.3110, uncertainty: 1.7978, loss: 0.1332, lr: 3.45e-06
+     Epoch[19] Iteration[60/384], entropy: 0.2528, uncertainty: 1.8997, loss: 0.1158, lr: 9.89e-06
+     Epoch[19] Iteration[70/384], entropy: 0.3165, uncertainty: 1.8845, loss: 0.1389, lr: 1.65e-06
+     Epoch[19] Iteration[80/384], entropy: 0.1910, uncertainty: 1.8208, loss: 0.0922, lr: 3.45e-06
+     Epoch[19] Iteration[90/384], entropy: 0.2619, uncertainty: 1.7628, loss: 0.1177, lr: 9.89e-06
+     Epoch[19] Iteration[100/384], entropy: 0.3126, uncertainty: 1.6681, loss: 0.1445, lr: 1.65e-06
+     Epoch[19] Iteration[110/384], entropy: 0.4176, uncertainty: 1.9312, loss: 0.1803, lr: 3.45e-06
+     Epoch[19] Iteration[120/384], entropy: 0.3791, uncertainty: 1.7827, loss: 0.1659, lr: 9.89e-06
+     Epoch[19] Iteration[130/384], entropy: 0.4854, uncertainty: 1.9814, loss: 0.2086, lr: 1.65e-06
+     Epoch[19] Iteration[140/384], entropy: 0.3539, uncertainty: 1.7657, loss: 0.1501, lr: 3.45e-06
+     Epoch[19] Iteration[150/384], entropy: 0.2498, uncertainty: 1.8186, loss: 0.1106, lr: 9.89e-06
+     Epoch[19] Iteration[160/384], entropy: 0.4537, uncertainty: 1.9082, loss: 0.1970, lr: 1.65e-06
+     Epoch[19] Iteration[170/384], entropy: 0.3890, uncertainty: 1.8417, loss: 0.1818, lr: 3.45e-06
+     Epoch[19] Iteration[180/384], entropy: 0.2472, uncertainty: 1.9764, loss: 0.1106, lr: 9.89e-06
+     Epoch[19] Iteration[190/384], entropy: 0.4383, uncertainty: 1.9970, loss: 0.2002, lr: 1.65e-06
+     Epoch[19] Iteration[200/384], entropy: 0.1824, uncertainty: 1.7381, loss: 0.0817, lr: 3.45e-06
+     Epoch[19] Iteration[210/384], entropy: 0.3539, uncertainty: 1.8223, loss: 0.1533, lr: 9.89e-06
+     Epoch[19] Iteration[220/384], entropy: 0.4527, uncertainty: 1.9450, loss: 0.2029, lr: 1.65e-06
+     Epoch[19] Iteration[230/384], entropy: 0.1797, uncertainty: 1.7180, loss: 0.0867, lr: 3.45e-06
+     Epoch[19] Iteration[240/384], entropy: 0.3781, uncertainty: 1.7397, loss: 0.1580, lr: 9.89e-06
+     Epoch[19] Iteration[250/384], entropy: 0.3580, uncertainty: 1.9528, loss: 0.1668, lr: 1.65e-06
+     Epoch[19] Iteration[260/384], entropy: 0.4326, uncertainty: 1.8201, loss: 0.1874, lr: 3.45e-06
+     Epoch[19] Iteration[270/384], entropy: 0.4354, uncertainty: 1.8110, loss: 0.1884, lr: 9.89e-06
+     Epoch[19] Iteration[280/384], entropy: 0.4375, uncertainty: 1.8128, loss: 0.1922, lr: 1.65e-06
+     Epoch[19] Iteration[290/384], entropy: 0.4587, uncertainty: 1.8974, loss: 0.2072, lr: 3.45e-06
+     Epoch[19] Iteration[300/384], entropy: 0.5800, uncertainty: 1.8446, loss: 0.2531, lr: 9.89e-06
+     Epoch[19] Iteration[310/384], entropy: 0.2094, uncertainty: 1.7928, loss: 0.0995, lr: 1.65e-06
+     Epoch[19] Iteration[320/384], entropy: 0.1709, uncertainty: 1.7309, loss: 0.0816, lr: 3.45e-06
+     Epoch[19] Iteration[330/384], entropy: 0.2761, uncertainty: 1.7944, loss: 0.1204, lr: 9.89e-06
+     Epoch[19] Iteration[340/384], entropy: 0.3248, uncertainty: 1.8222, loss: 0.1523, lr: 1.65e-06
+     Epoch[19] Iteration[350/384], entropy: 0.4453, uncertainty: 1.9166, loss: 0.2053, lr: 3.45e-06
+     Epoch[19] Iteration[360/384], entropy: 0.5065, uncertainty: 2.0058, loss: 0.2277, lr: 9.89e-06
+     Epoch[19] Iteration[370/384], entropy: 0.3575, uncertainty: 1.8542, loss: 0.1575, lr: 1.65e-06
+     Epoch[19] Iteration[380/384], entropy: 0.6391, uncertainty: 2.0067, loss: 0.2763, lr: 3.45e-06
+     Averaged stats: entropy_avg: 0.3583, uncertainty_avg: 1.8556, loss_avg: 0.1595, lr_avg: 4.87e-06
+     itm tta time 0:01:10
+(6144, 8)
+### TTA Eval Score: 
++-------+--------+--------+--------+--------+--------+
+| epoch |   R1   |   R5   |  R10   |  mAP   |  mINP  |
++-------+--------+--------+--------+--------+--------+
+|  -999 | 70.630 | 86.891 | 91.813 | 63.397 | 47.052 |
+|   0   | 70.598 | 86.875 | 91.813 | 63.410 | 47.090 |
+|   1   | 70.598 | 86.923 | 91.845 | 63.417 | 47.120 |
+|   2   | 70.695 | 86.875 | 91.829 | 63.434 | 47.133 |
+|   4   | 70.776 | 86.842 | 91.813 | 63.468 | 47.187 |
+|   9   | 70.809 | 86.907 | 91.862 | 63.469 | 47.192 |
+|   14  | 70.825 | 86.940 | 91.862 | 63.479 | 47.219 |
+|   19  | 70.825 | 86.891 | 91.862 | 63.474 | 47.249 |
++-------+--------+--------+--------+--------+--------+
+     logs:  {'epo': 19, 'R1': 70.825, 'R5': 86.891, 'R10': 91.862, 'mAP': 63.474, 'mINP': 47.249, 'entropy': 0.3583065926244384, 'uncertainty': 1.8555764838268882, 'loss': 0.15953837786065905, 'lr': 4.871296368324321e-06}
+### best epoch 14 : {'epo': '14', 'R1': '70.825', 'R5': '86.94', 'R10': '91.862', 'mAP': '63.479', 'mINP': '47.219', 'entropy': '0.37545639864708247', 'uncertainty': '1.8707580597777116', 'loss': '0.16644361144617983', 'lr': '4.871296368324322e-06'}
+### Time 0:24:38

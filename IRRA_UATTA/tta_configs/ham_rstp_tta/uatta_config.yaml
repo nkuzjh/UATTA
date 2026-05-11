@@ -1,0 +1,86 @@
+
+### TTA configuration
+output_dir: outputs/reproduce/rstpreid
+
+num_epoch: 60 # num_samples = 2000
+eval_epochs: [0, 1, 2, 4, 9, 14, 19, 29, 39, 49, 59]
+lr: 1.0e-03
+seed: 42
+
+tta: True
+device: cuda
+log_period: 10
+k_test: 128
+
+sample_selection: 'topk'
+k_sample_selection: 5
+
+batch_size_tta: 32
+neg_sample_range: [5, 8]
+k_tta: 4
+## score temperature
+temperature: 0.02
+
+uncertainty: 'diff_div_mean'
+uncertainty_temper: 1.0
+uncertainty_temper_is_learnable: False
+uncertainty_t2i_temper: 1.0
+uncertainty_i2t_temper: 1.0
+## tta layers
+text_encoder_no_tta_layer: [0,6]
+
+## optimizer
+optimizer: Adam
+alpha: 0.9
+beta: 0.999
+weight_decay: 4.0e-05
+weight_decay_bias: 0.0
+bias_lr_factor: 2.0
+lr_factor: 5.0
+
+## scheduler
+lrscheduler: cosine
+milestones: !!python/tuple
+- 20
+- 50
+gamma: 0.1
+warmup_factor: 0.1
+warmup_epochs: 5
+warmup_method: linear
+target_lr: 0
+power: 0.9
+
+### IRRA configuration for RSTPReid dataset
+MLM: true
+batch_size: 64
+cmt_depth: 4
+dataset_name: RSTPReid
+distributed: false
+eval_period: 1
+id_loss_weight: 1.0
+img_aug: true
+img_size: !!python/tuple
+- 384
+- 128
+local_rank: 0
+loss_names: sdm+id+mlm
+masked_token_rate: 0.8
+masked_token_unchanged_rate: 0.1
+mlm_loss_weight: 1.0
+name: irra_rstp
+num_instance: 4
+num_workers: 8
+pretrain_choice: ViT-B/16
+resume: false
+resume_ckpt_file: ''
+root_dir: ./input/images
+sampler: random
+stride_size: 16
+test_batch_size: 512
+text_length: 77
+training: true
+val_dataset: test
+vocab_size: 49408
+
+### HAM configuration for RSTPReid dataset
+ckpt_dir: checkpoints/HAM_checkpoint/random100w_2HAMcaptions/best0.pth
