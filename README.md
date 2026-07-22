@@ -184,109 +184,216 @@ We also thank the following repositories for methodological or implementation re
 ## Contact
 
 For questions, please contact Jiahao Zhang at yc57963@um.edu.mo.
-
-## 🔍 Person Re-ID & Text-based Retrieval Ecosystem
+## 🔍 Person Re-ID &amp; Text-based Retrieval Ecosystem
 
 <div align="center">
-  <table class="cardtable">
-    <tr>
-      <td align="center" colspan="3">
-        <a href=" ">
-          <h3>⛹️</h3>
-          <b>Person re-ID Baseline (PyTorch)</b>
-        </a >
-        <br><sub>A <b>Tiny, Friendly &amp; Strong</b> PyTorch Baseline for Person / Vehicle Re-ID<br>with Hands-on Tutorial · The Community Standard since 2017</sub>
-        <br><br>
-        <a href="https://github.com/layumi/Person_reID_baseline_pytorch">< img src="https://img.shields.io/github/stars/layumi/Person_reID_baseline_pytorch.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="33%">
-        <a href="https://github.com/layumi/3D-Magic-Mirror">
-          <h3>🪞</h3>
-          <b>3D Magic Mirror</b>
-        </a >
-        <br><sub>Clothing Reconstruction from a Single Image<br>via a Causal Perspective · npj AI'26</sub>
-        <br><br>
-        <a href="https://github.com/layumi/3D-Magic-Mirror">< img src="https://img.shields.io/github/stars/layumi/3D-Magic-Mirror.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/NVlabs/DG-Net">
-          <h3>✨</h3>
-          <b>DG-Net</b>
-        </a >
-        <br><sub>Joint Generation + Re-ID Learning<br>CVPR'19 Oral · NVIDIA</sub>
-        <br><br>
-        <a href="https://github.com/NVlabs/DG-Net">< img src="https://img.shields.io/github/stars/NVlabs/DG-Net.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/layumi/Person-reID_GAN">
-          <h3>🎨</h3>
-          <b>Person re-ID GAN</b>
-        </a >
-        <br><sub>GAN-based Augmentation (LSRO)<br>ICCV'17</sub>
-        <br><br>
-        <a href="https://github.com/layumi/Person-reID_GAN">< img src="https://img.shields.io/github/stars/layumi/Person-reID_GAN.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="33%">
-        <a href="https://github.com/layumi/Image-Text-Embedding">
-          <h3>📝</h3>
-          <b>Language Person Search</b>
-        </a >
-        <br><sub>Text-based Person Retrieval<br>Dual-Path Embedding</sub>
-        <br><br>
-        <a href="https://github.com/layumi/Image-Text-Embedding">< img src="https://img.shields.io/github/stars/layumi/Image-Text-Embedding.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/Shuyu-XJTU/APTM">
-          <h3>🏷️</h3>
-          <b>APTM</b>
-        </a >
-        <br><sub>Attribute Prompt Learning &amp; Text Matching<br>MALS Benchmark (1.5M pairs) · ACM MM'23</sub>
-        <br><br>
-        <a href="https://github.com/Shuyu-XJTU/APTM">< img src="https://img.shields.io/github/stars/Shuyu-XJTU/APTM.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/Shuyu-XJTU/CMP">
-          <h3>🚨</h3>
-          <b>CMP</b>
-        </a >
-        <br><sub>Text-based Person <b>Anomaly</b> Search<br>PAB Benchmark (1M pairs) · ICCV'25 <b>Highlight</b></sub>
-        <br><br>
-        <a href="https://github.com/Shuyu-XJTU/CMP">< img src="https://img.shields.io/github/stars/Shuyu-XJTU/CMP.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="33%">
-        <a href="https://github.com/nkuzjh/UATTA">
-          <h3>🎯</h3>
-          <b>UATTA</b>
-        </a >
-        <br><sub>Uncertainty-Aware Test-Time Adaptation<br>for Text-based Person Search · SIGIR'26</sub>
-        <br><br>
-        <a href="https://github.com/nkuzjh/UATTA">< img src="https://img.shields.io/github/stars/nkuzjh/UATTA.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/layumi/person-reid-3d">
-          <h3>🧊</h3>
-          <b>3D Person re-ID</b>
-        </a >
-        <br><sub>Parameter-Efficient Re-ID<br>in the 3D Space (OG-Net)</sub>
-        <br><br>
-        <a href="https://github.com/layumi/person-reid-3d">< img src="https://img.shields.io/github/stars/layumi/person-reid-3d.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-      <td align="center" width="33%">
-        <a href="https://github.com/layumi/Pedestrian_Alignment">
-          <h3>🚶</h3>
-          <b>Pedestrian Alignment</b>
-        </a >
-        <br><sub>Pedestrian Alignment Network (PAN)<br>for Robust Re-ID</sub>
-        <br><br>
-        <a href="https://github.com/layumi/Pedestrian_Alignment">< img src="https://img.shields.io/github/stars/layumi/Pedestrian_Alignment.svg?style=social&label=Star" alt="GitHub stars"></a >
-      </td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr>
+    <td align="center" colspan="3">
+      <a href="https://github.com/layumi/Person_reID_baseline_pytorch">
+        <h3>⛹️</h3>
+        <strong>Person re-ID Baseline (PyTorch)</strong>
+      </a>
+      <br>
+      <sub>
+        A <strong>Tiny, Friendly &amp; Strong</strong> PyTorch Baseline for Person / Vehicle Re-ID
+        <br>
+        with Hands-on Tutorial · The Community Standard since 2017
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/Person_reID_baseline_pytorch">
+        <img
+          src="https://img.shields.io/github/stars/layumi/Person_reID_baseline_pytorch.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+  </tr>
 
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/layumi/3D-Magic-Mirror">
+        <h3>🪞</h3>
+        <strong>3D Magic Mirror</strong>
+      </a>
+      <br>
+      <sub>
+        Clothing Reconstruction from a Single Image
+        <br>
+        via a Causal Perspective · npj AI'26
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/3D-Magic-Mirror">
+        <img
+          src="https://img.shields.io/github/stars/layumi/3D-Magic-Mirror.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/NVlabs/DG-Net">
+        <h3>✨</h3>
+        <strong>DG-Net</strong>
+      </a>
+      <br>
+      <sub>
+        Joint Generation + Re-ID Learning
+        <br>
+        CVPR'19 Oral · NVIDIA
+      </sub>
+      <br><br>
+      <a href="https://github.com/NVlabs/DG-Net">
+        <img
+          src="https://img.shields.io/github/stars/NVlabs/DG-Net.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/layumi/Person-reID_GAN">
+        <h3>🎨</h3>
+        <strong>Person re-ID GAN</strong>
+      </a>
+      <br>
+      <sub>
+        GAN-based Augmentation (LSRO)
+        <br>
+        ICCV'17
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/Person-reID_GAN">
+        <img
+          src="https://img.shields.io/github/stars/layumi/Person-reID_GAN.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/layumi/Image-Text-Embedding">
+        <h3>📝</h3>
+        <strong>Language Person Search</strong>
+      </a>
+      <br>
+      <sub>
+        Text-based Person Retrieval
+        <br>
+        Dual-Path Embedding
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/Image-Text-Embedding">
+        <img
+          src="https://img.shields.io/github/stars/layumi/Image-Text-Embedding.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/Shuyu-XJTU/APTM">
+        <h3>🏷️</h3>
+        <strong>APTM</strong>
+      </a>
+      <br>
+      <sub>
+        Attribute Prompt Learning &amp; Text Matching
+        <br>
+        MALS Benchmark (1.5M pairs) · ACM MM'23
+      </sub>
+      <br><br>
+      <a href="https://github.com/Shuyu-XJTU/APTM">
+        <img
+          src="https://img.shields.io/github/stars/Shuyu-XJTU/APTM.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/Shuyu-XJTU/CMP">
+        <h3>🚨</h3>
+        <strong>CMP</strong>
+      </a>
+      <br>
+      <sub>
+        Text-based Person <strong>Anomaly</strong> Search
+        <br>
+        PAB Benchmark (1M pairs) · ICCV'25 <strong>Highlight</strong>
+      </sub>
+      <br><br>
+      <a href="https://github.com/Shuyu-XJTU/CMP">
+        <img
+          src="https://img.shields.io/github/stars/Shuyu-XJTU/CMP.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/nkuzjh/UATTA">
+        <h3>🎯</h3>
+        <strong>UATTA</strong>
+      </a>
+      <br>
+      <sub>
+        Uncertainty-Aware Test-Time Adaptation
+        <br>
+        for Text-based Person Search · SIGIR'26
+      </sub>
+      <br><br>
+      <a href="https://github.com/nkuzjh/UATTA">
+        <img
+          src="https://img.shields.io/github/stars/nkuzjh/UATTA.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/layumi/person-reid-3d">
+        <h3>🧊</h3>
+        <strong>3D Person re-ID</strong>
+      </a>
+      <br>
+      <sub>
+        Parameter-Efficient Re-ID
+        <br>
+        in the 3D Space (OG-Net)
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/person-reid-3d">
+        <img
+          src="https://img.shields.io/github/stars/layumi/person-reid-3d.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+
+    <td align="center" width="33%">
+      <a href="https://github.com/layumi/Pedestrian_Alignment">
+        <h3>🚶</h3>
+        <strong>Pedestrian Alignment</strong>
+      </a>
+      <br>
+      <sub>
+        Pedestrian Alignment Network (PAN)
+        <br>
+        for Robust Re-ID
+      </sub>
+      <br><br>
+      <a href="https://github.com/layumi/Pedestrian_Alignment">
+        <img
+          src="https://img.shields.io/github/stars/layumi/Pedestrian_Alignment.svg?style=social&amp;label=Star"
+          alt="GitHub stars"
+        >
+      </a>
+    </td>
+  </tr>
+</table>
+</div>
