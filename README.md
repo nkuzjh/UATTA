@@ -152,6 +152,39 @@ The original paper/retained SOTA metrics and the latest reproduced metrics are s
 
 Small numeric differences are expected across hardware, CUDA, and PyTorch versions.
 
+## Acknowledgements
+
+This release directly builds on code from:
+
+- IRRA: https://github.com/anosorae/IRRA
+- CMP: https://github.com/Shuyu-XJTU/CMP
+
+See `THIRD_PARTY_NOTICES.md` for direct fork attribution.
+
+We also thank the following repositories for methodological or implementation references:
+
+- 2025-ICLR-TCR: https://github.com/XLearning-SCU/2025-ICLR-TCR
+- TENT: https://github.com/DequanWang/tent
+- MLLM4Text-ReID: https://github.com/WentaoTan/MLLM4Text-ReID
+- HAM: https://github.com/sssaury/HAM
+
+## Citation
+
+```bibtex
+@conference{zhang2026pretrain,
+      title={Pretrain-then-Adapt: Uncertainty-Aware Test-Time Adaptation for Text-based Person Search},
+      author={Jiahao Zhang and Shaofei Huang and Yaxiong Wang and Zhedong Zheng},
+      year={2026},
+      booktitle={SIGIR},
+      doi={https://doi.org/10.1145/3805712.3809598},
+      url={https://arxiv.org/abs/2604.08598},
+}
+```
+
+## Contact
+
+For questions, please contact Jiahao Zhang at yc57963@um.edu.mo.
+
 ## 🔍 Person Re-ID & Text-based Retrieval Ecosystem
 
 <div align="center">
@@ -257,35 +290,3 @@ Small numeric differences are expected across hardware, CUDA, and PyTorch versio
   </table>
 </div>
 
-## Acknowledgements
-
-This release directly builds on code from:
-
-- IRRA: https://github.com/anosorae/IRRA
-- CMP: https://github.com/Shuyu-XJTU/CMP
-
-See `THIRD_PARTY_NOTICES.md` for direct fork attribution.
-
-We also thank the following repositories for methodological or implementation references:
-
-- 2025-ICLR-TCR: https://github.com/XLearning-SCU/2025-ICLR-TCR
-- TENT: https://github.com/DequanWang/tent
-- MLLM4Text-ReID: https://github.com/WentaoTan/MLLM4Text-ReID
-- HAM: https://github.com/sssaury/HAM
-
-## Citation
-
-```bibtex
-@conference{zhang2026pretrain,
-      title={Pretrain-then-Adapt: Uncertainty-Aware Test-Time Adaptation for Text-based Person Search},
-      author={Jiahao Zhang and Shaofei Huang and Yaxiong Wang and Zhedong Zheng},
-      year={2026},
-      booktitle={SIGIR},
-      doi={https://doi.org/10.1145/3805712.3809598},
-      url={https://arxiv.org/abs/2604.08598},
-}
-```
-
-## Contact
-
-For questions, please contact Jiahao Zhang at yc57963@um.edu.mo.
