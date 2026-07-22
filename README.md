@@ -184,6 +184,7 @@ We also thank the following repositories for methodological or implementation re
 ## Contact
 
 For questions, please contact Jiahao Zhang at yc57963@um.edu.mo.
+
 ## 🔍 Person Re-ID &amp; Text-based Retrieval Ecosystem
 
 <div align="center">
